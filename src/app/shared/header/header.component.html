@@ -203,10 +203,8 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" routerLink="/gallery/photos"
                                     routerLinkActive="active">Photos</a> </li>
-                            <!-- <li><a class="dropdown-item">Photos</a> </li> -->
-                            <!-- <li><a class="dropdown-item">Documentary Film</a> </li> -->
-                            <li><a class="dropdown-item" routerLink="/more/magazine"
-                                routerLinkActive="active">Our Magazine</a> </li>
+                            <li><a class="dropdown-item" routerLink="/more/magazine" routerLinkActive="active">Our
+                                    Magazine</a> </li>
                         </ul>
                     </li>
 
@@ -241,7 +239,7 @@
                             <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Student Corner</a>
                             </li>
                             <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Form</a> </li>
-                            <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Annual Reports</a>
+                            <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Reports</a>
                             </li>
                         </ul>
                     </li>
@@ -285,10 +283,8 @@
                                             <ul class="sub-menu">
                                                 <li><a routerLink="/gallery/photos" routerLinkActive="active">Photos</a>
                                                 </li>
-                                                <!-- <li><a>Photos</a> </li> -->
-                                                <!-- <li><a>Documentary Film</a> </li> -->
-                                                <li><a routerLink="/more/magazine"
-                                                    routerLinkActive="active">Our Magazine</a> </li>
+                                                <li><a routerLink="/more/magazine" routerLinkActive="active">Our
+                                                        Magazine Balmitra</a> </li>
                                             </ul>
                                         </li>
 
@@ -301,9 +297,11 @@
                                             <a>Course</a>
                                             <ul class="sub-menu">
                                                 <li><a routerLink="/course/science"
-                                                        routerLinkActive="active">Science</a> </li>
+                                                        routerLinkActive="active">Science</a>
+                                                </li>
                                                 <li><a routerLink="/course/para"
-                                                        routerLinkActive="active">Paramedical</a> </li>
+                                                        routerLinkActive="active">Paramedical</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="">
@@ -342,7 +340,7 @@
                                                     <a><span>Form</span></a>
                                                 </li>
                                                 <li class="">
-                                                    <a><span>Annual Reports</span></a>
+                                                    <a><span>Reports</span></a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -394,10 +392,8 @@
                                                 <ul class="sub-menu">
                                                     <li><a routerLink="/gallery/photos"
                                                             routerLinkActive="active">Photos</a> </li>
-                                                    <!-- <li><a>Photos</a> </li> -->
-                                                    <!-- <li><a>Documentary Film</a> </li> -->
-                                                    <li><a routerLink="/more/magazine"
-                                                        routerLinkActive="active">Our Magazine</a> </li>
+                                                    <li><a routerLink="/more/magazine" routerLinkActive="active">Our
+                                                            Magazine Balmitra</a> </li>
                                                 </ul>
                                             </li>
 
@@ -423,7 +419,8 @@
                                                 <ul class="sub-menu">
                                                     <!-- <li><a routerLink="" routerLinkActive="active">Department</a> </li> -->
                                                     <li><a routerLink="/more/result"
-                                                            routerLinkActive="active">Results</a> </li>
+                                                            routerLinkActive="active">Results</a>
+                                                    </li>
                                                     <li>
                                                         <a routerLink="/basic/committee"
                                                             routerLinkActive="active">Committee</a>
@@ -440,7 +437,8 @@
                                                             </li>
                                                             <li class="menu-item-has-children current-menu-item">
                                                                 <a routerLink="/more/paper"
-                                                                    routerLinkActive="active">Old Question Papers</a>
+                                                                    routerLinkActive="active">Old
+                                                                    Question Papers</a>
                                                             </li>
                                                             <li class="menu-item-has-children current-menu-item">
                                                                 <a>Scholarships for Students</a>
@@ -451,7 +449,10 @@
                                                         <a><span>Form</span></a>
                                                     </li>
                                                     <li class="">
+                                                        <a><span>Reports</span></a>
+
                                                         <a><span>Annual Reports</span></a>
+
                                                     </li>
                                                 </ul>
                                             </li>
@@ -469,7 +470,7 @@
         <ng-template #content let-c="close" let-d="dismiss">
             <div class="modal-header">
                 <div class="icon-part" style="margin: 10px 20px 10px 20px !important;">
-                    <img src="assets/images/cake.png" alt="">
+                    <img src="assets/images/categories/icons/cake.png" alt="">
                 </div>
                 <h4 class="modal-title" id="modal-basic-title" style="text-align: center;">Wish List of the Day ! </h4>
                 <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
@@ -515,6 +516,8 @@
                             </li>
                         </ul>
                     </div>
+
+
                     <hr *ngIf="staffDataTable.length>1">
                 </div>
             </div>

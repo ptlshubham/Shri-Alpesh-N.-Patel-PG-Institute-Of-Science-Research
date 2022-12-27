@@ -15,7 +15,7 @@ export class LeftImageTextComponent implements OnInit {
   public trusttitle: string = 'The Trust';
   public title: string = '';
   public subtitle: string = '';
-  public asubtitle: string = 'Shri Alpesh N. Patel PG Institute of Science & Research';
+  public asubtitle: string = 'Shri Alpesh N. Patel PG Institute of Science & Research (2f Certified)';
   public tsubtitle: string = 'Charotar Education Society';
   public dimg: string = 'assets/images/anpatel/about/11.jpg';
   himg: string = 'assets/images/anpatel/about/44.jpg';
@@ -26,13 +26,13 @@ export class LeftImageTextComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if (this.router.url == "/anpatel/basic/about") {
+    if (this.router.url == "/basic/about") {
       this.textdata = this.aboutdata;
       this.daimg = this.dimg;
       this.title = this.abouttitle;
       this.subtitle = this.asubtitle;
     }
-   else if (this.router.url == "/anpatel/basic/trust") {
+   else if (this.router.url == "/basic/trust") {
     this.textdata = this.trustdata;
     this.daimg = this.timg;
     this.title = this.trusttitle;
