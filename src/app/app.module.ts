@@ -10,6 +10,7 @@ import { BasicModule } from './basic/basic.module';
 import { DepartmentModule } from './department/department.module';
 import { CourseModule } from './course/course.module';
 import { MoreModule } from './more/more.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MoreModule } from './more/more.module';
     BasicModule,
     DepartmentModule,
     CourseModule,
-    MoreModule
+    MoreModule,
+    HttpClientModule
      
   ],
   providers: [],
