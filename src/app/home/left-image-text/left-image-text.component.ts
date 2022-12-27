@@ -26,13 +26,13 @@ export class LeftImageTextComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if (this.router.url == "/anpatel/basic/about") {
+    if (this.router.url == "/basic/about") {
       this.textdata = this.aboutdata;
       this.daimg = this.dimg;
       this.title = this.abouttitle;
       this.subtitle = this.asubtitle;
     }
-   else if (this.router.url == "/anpatel/basic/trust") {
+   else if (this.router.url == "/basic/trust") {
     this.textdata = this.trustdata;
     this.daimg = this.timg;
     this.title = this.trusttitle;

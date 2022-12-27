@@ -10,6 +10,7 @@ import { CampusComponent } from './campus/campus.component';
 import { SearchComponent } from './search/search.component';
 import { PaperComponent } from './paper/paper.component';
 import { SyllabusComponent } from './syllabus/syllabus.component';
+import { NewsComponent } from './news/news.component';
 
 
 
@@ -20,7 +21,8 @@ import { SyllabusComponent } from './syllabus/syllabus.component';
     CampusComponent,
     SearchComponent,
     PaperComponent,
-    SyllabusComponent
+    SyllabusComponent,
+    NewsComponent
   ],
   imports: [
     CommonModule,
