@@ -10,6 +10,8 @@ import { BasicRoutes } from './basic.routing';
 import { HomeModule } from '../home/home.module';
 import { InfrastructureComponent } from './infrastructure/infrastructure.component';
 import { ActivityComponent } from './activity/activity.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -26,7 +28,10 @@ import { ActivityComponent } from './activity/activity.component';
     CommonModule,
     SharedModule,
     RouterModule.forChild(BasicRoutes),
-    HomeModule
+    HomeModule,
+    NgbDropdownModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ]
 })

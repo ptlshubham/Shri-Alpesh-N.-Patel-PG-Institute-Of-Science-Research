@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { CampusComponent } from './campus/campus.component';
 import { LibraryComponent } from './library/library.component';
+import { MagazineComponent } from './magazine/magazine.component';
 import { NewsComponent } from './news/news.component';
 import { PaperComponent } from './paper/paper.component';
 import { ResultComponent } from './result/result.component';
@@ -31,13 +32,17 @@ export const MoreRoutes: Routes = [{
             component: CampusComponent
         },
         {
-            path:'search/:id',
-            component:SearchComponent
+            path: 'search/:id',
+            component: SearchComponent
         },
         {
-            path:'news',
-            component:NewsComponent
+            path: 'news',
+            component: NewsComponent
+        },
+        {
+            path: 'magazine',
+            component: MagazineComponent
         }
 
-]
+    ]
 }];
