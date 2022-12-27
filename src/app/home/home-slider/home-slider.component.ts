@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from 'src/app/core/services/home.services';
 
 @Component({
   selector: 'app-home-slider',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeSliderComponent implements OnInit {
 
-  constructor() { }
+  imagesData: any = [];
+  sliderImages: any = [];
+
+  constructor(
+    private homeService: HomeService
+  ) { }
 
   ngOnInit(): void {
+    this.getImagesDataById();
   }
 
+  getImagesDataById() {
+    this.sliderImages = [];
+    this.homeService.getBannersImagesById(localStorage.getItem('InstituteId')).subscribe((res: any) => {
+      this.imagesData = res;
+      this.imagesData.forEach((element: any) => {
+        if (element.purpose == 'slider') {
+          this.sliderImages.push(element);
+        }
+      });
+    })
+  }
 }
+

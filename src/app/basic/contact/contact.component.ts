@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from 'src/app/core/services/home.services';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  contactModel: any = {};
+  constructor(
+    private homeService: HomeService,
+    private toastrMessage:ToastrService
 
-  constructor() { }
+  ) { }
 
   ngOnInit(): void {
   }
+  saveContactUSData() {
+    this.contactModel.institute_id = localStorage.getItem('InstituteId');
 
+    this.homeService.saveContactUsDetails(this.contactModel).subscribe((res: any) => {
+      if (res == 'success'){
+        this.toastrMessage.success('Thank you for valuable feedback.', 'Success', { timeOut: 3000, });
+      }
+    })
+  }
 }

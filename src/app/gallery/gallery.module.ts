@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { GalleryRoutes } from './gallery.routing';
 import { HomeModule } from '../home/home.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -16,6 +17,7 @@ import { HomeModule } from '../home/home.module';
     CommonModule,
     SharedModule,
     HomeModule,
+    NgxPaginationModule,
     RouterModule.forChild(GalleryRoutes)
   ]
 })

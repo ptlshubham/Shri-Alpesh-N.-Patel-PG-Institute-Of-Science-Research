@@ -11,6 +11,8 @@ import { SearchComponent } from './search/search.component';
 import { PaperComponent } from './paper/paper.component';
 import { SyllabusComponent } from './syllabus/syllabus.component';
 import { NewsComponent } from './news/news.component';
+import { MagazineComponent } from './magazine/magazine.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -22,13 +24,15 @@ import { NewsComponent } from './news/news.component';
     SearchComponent,
     PaperComponent,
     SyllabusComponent,
-    NewsComponent
+    NewsComponent,
+    MagazineComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(MoreRoutes),
     HomeModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
   ]
 })
 export class MoreModule { }
