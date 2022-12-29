@@ -213,7 +213,16 @@
                             routerLink="/basic/infrastructure" routerLinkActive="active">Infrastructure</a>
 
                     </li>
-                    
+                    <li class="btn-group">
+                        <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Department</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/department/sttaf"
+                                    routerLinkActive="active">Staff Details</a> </li>
+                            <li><a class="dropdown-item" routerLink=""
+                                    routerLinkActive="active">Student Details</a> </li>
+                        </ul>
+                    </li>
                     <li class="btn-group">
                         <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">Course</a>
@@ -293,138 +302,12 @@
                                                 routerLinkActive="active">Infrastructure</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a   routerLinkActive="active">Department</a>
+                                            <a>Department</a>
                                             <ul class="sub-menu">
-                                                <li class="menu-item-has-children">
-                                                    <a>Chemistry</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a>Microbiology</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a>Biotechnology</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a> Medical Lab Technology</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a>Biochemistry</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a>Information Technology</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a>Mathematics</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a>Physics</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a>Non-Teaching</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a>Office</a>
-                                                    <ul class="sub-menu">
-                                                        <li class="current-menu-item">
-                                                            <a routerLink="/department/staff"
-                                                                routerLinkActive="active">Staff Details</a>
-                                                        </li>
-                                                        <li class="menu-item-has-children current-menu-item">
-                                                            <a routerLink="/department/student"
-                                                                routerLinkActive="active">Student Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
+                                                <li><a routerLink="/department/staff"
+                                                        routerLinkActive="active">Staff Details</a> </li>
+                                                <li><a routerLink=""
+                                                        routerLinkActive="active">Student Details</a> </li>
                                             </ul>
                                         </li>
                                         <li class="menu-item-has-children">
@@ -537,138 +420,12 @@
                                                     routerLinkActive="active">Infrastructure</a>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a   routerLinkActive="active">Department</a>
+                                                <a>Department</a>
                                                 <ul class="sub-menu">
-                                                    <li class="menu-item-has-children">
-                                                        <a>Chemistry</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item-has-children">
-                                                        <a>Microbiology</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item-has-children">
-                                                        <a>Biotechnology</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item-has-children">
-                                                        <a> Medical Lab Technology</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item-has-children">
-                                                        <a>Biochemistry</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item-has-children">
-                                                        <a>Information Technology</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item-has-children">
-                                                        <a>Mathematics</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item-has-children">
-                                                        <a>Physics</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item-has-children">
-                                                        <a>Non-Teaching</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item-has-children">
-                                                        <a>Office</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item">
-                                                                <a routerLink="/department/staff"
-                                                                    routerLinkActive="active">Staff Details</a>
-                                                            </li>
-                                                            <li class="menu-item-has-children current-menu-item">
-                                                                <a routerLink="/department/student"
-                                                                    routerLinkActive="active">Student Details</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
+                                                    <li><a routerLink="/department/staff"
+                                                            routerLinkActive="active">Staff Details</a> </li>
+                                                    <li><a routerLink=""
+                                                            routerLinkActive="active">Student Details</a> </li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
