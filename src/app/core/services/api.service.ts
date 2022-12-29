@@ -36,6 +36,7 @@ export class ApiService {
   public static removeImagesByIdDetailsURL: string = ApiService.HOST_URL + '/admin/RemoveImagesByIdDetails';
   public static saveDepartmentListURL: string = ApiService.HOST_URL + '/admin/SaveDepartmentList';
   public static getDepartmentByIdDetailsURL: string = ApiService.HOST_URL + '/admin/GetDepartmentByIdDetails/';
+  public static getYearbyGroupDetailsURL: string = ApiService.HOST_URL + '/admin/GetYearbyGroupDetails/';
   public static removeDepartmentByIdDetailsURL: string = ApiService.HOST_URL + '/admin/RemoveDepartmentByIdDetails/';
   public static updateDepartmentListURL: string = ApiService.HOST_URL + '/admin/UpdateDepartmentList';
   public static saveStaffProfileImagesURL: string = ApiService.HOST_URL + '/admin/SaveStaffProfileImages';
@@ -66,7 +67,10 @@ export class ApiService {
   public static getNewsOnlyForCESURL: string = ApiService.HOST_URL + '/admin/GetNewsOnlyForCES/';
   public static getMagazineListURL: string = ApiService.HOST_URL + '/admin/GetMagazineList';
   public static saveCounselingDetailsURL: string = ApiService.HOST_URL + '/admin/SaveCounselingDetails'
-
+  public static getResultDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetResultDetailsById/';
+  public static getOthersByIdDetailsURL: string = ApiService.HOST_URL + '/admin/GetOthersByIdDetails/';
+  public static getScholarshipDetailsURL: string = ApiService.HOST_URL + '/admin/GetScholarshipDetails/';
+  public static getQuestionPapersDetailsURL: string = ApiService.HOST_URL + '/admin/GetQuestionPapersDetails/';
 
 
 

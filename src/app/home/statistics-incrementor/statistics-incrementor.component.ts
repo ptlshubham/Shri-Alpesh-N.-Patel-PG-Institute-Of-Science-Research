@@ -13,28 +13,28 @@ export class StatisticsIncrementorComponent implements OnInit {
 
   projectCountStop: any = setInterval(() => {
     this.projectCount++;
-    if (this.projectCount == 284) {
+    if (this.projectCount == 100) {
       clearInterval(this.projectCountStop);
     }
-  }, 60)
+  }, 40)
   projectCountStop1: any = setInterval(() => {
     this.projectCount1++;
-    if (this.projectCount1 == 4523) {
+    if (this.projectCount1 == 422) {
       clearInterval(this.projectCountStop1);
     }
-  }, 50)
+  }, 5)
   projectCountStop2: any = setInterval(() => {
     this.projectCount2++;
     if (this.projectCount2 == 120) {
       clearInterval(this.projectCountStop2);
     }
-  }, 80)
+  }, 40)
   projectCountStop3: any = setInterval(() => {
     this.projectCount3++;
     if (this.projectCount3 == 100) {
       clearInterval(this.projectCountStop3);
     }
-  }, 80)
+  }, 40)
   constructor() { }
 
   ngOnInit(): void {

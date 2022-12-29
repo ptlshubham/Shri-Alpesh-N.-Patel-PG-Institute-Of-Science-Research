@@ -52,6 +52,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/more/search', id]);
 
   }
+  openLinks(id:any){
+    this.router.navigate(['/more/links', id]);
+  }
   getStaffDetails() {
     this.staffService.getBirthdayListData().subscribe((res: any) => {
       this.staffDataTable = res;

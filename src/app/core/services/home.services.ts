@@ -47,6 +47,9 @@ export class HomeService {
     getDepartmentDataById(institute_id: any) {
         return this.http.get(ApiService.getDepartmentByIdDetailsURL + institute_id);
     }
+    getYearData(institute_id: any) {
+        return this.http.get(ApiService.getYearbyGroupDetailsURL + institute_id);
+    }
     removeDepartmentDataById(institute_id: any) {
         return this.http.get(ApiService.removeDepartmentByIdDetailsURL + institute_id);
     }
@@ -93,5 +96,17 @@ export class HomeService {
     }
     saveCounselingDetail(data: any) {
         return this.http.post(ApiService.saveCounselingDetailsURL, data);
+    }
+    getResultDetailsById(id: any) {
+        return this.http.get(ApiService.getResultDetailsByIdURL + id);
+    }
+    getothersDataById(institute_id: any) {
+        return this.http.get(ApiService.getOthersByIdDetailsURL + institute_id);
+    }
+    getScholarshipData(id: any) {
+        return this.http.get(ApiService.getScholarshipDetailsURL + id);
+    }
+    getQuestionData(id: any) {
+        return this.http.get(ApiService.getQuestionPapersDetailsURL + id);
     }
 }

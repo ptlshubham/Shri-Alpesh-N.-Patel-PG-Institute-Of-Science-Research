@@ -13,6 +13,9 @@ import { SyllabusComponent } from './syllabus/syllabus.component';
 import { NewsComponent } from './news/news.component';
 import { MagazineComponent } from './magazine/magazine.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NgbDropdown, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AcademicCalendarComponent } from './academic-calendar/academic-calendar.component';
+import { ScholarshipComponent } from './scholarship/scholarship.component';
 
 
 
@@ -25,14 +28,17 @@ import { NgxPaginationModule } from 'ngx-pagination';
     PaperComponent,
     SyllabusComponent,
     NewsComponent,
-    MagazineComponent
+    MagazineComponent,
+    AcademicCalendarComponent,
+    ScholarshipComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(MoreRoutes),
     HomeModule,
     SharedModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgbModule
   ]
 })
 export class MoreModule { }

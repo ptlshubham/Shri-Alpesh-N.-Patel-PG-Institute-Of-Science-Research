@@ -238,8 +238,8 @@
                                     routerLinkActive="active">Committee</a> </li>
                             <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Student Corner</a>
                             </li>
-                            <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Form</a> </li>
-                            <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Reports</a>
+                            <li><a class="dropdown-item" (click)="openLinks('forms')">Form</a> </li>
+                            <li><a class="dropdown-item" (click)="openLinks('report')">Reports</a>
                             </li>
                         </ul>
                     </li>
@@ -321,26 +321,27 @@
                                                     <a>Student Corner</a>
                                                     <ul class="sub-menu">
                                                         <li class="menu-item-has-children current-menu-item">
-                                                            <a>Academic Calendar</a>
+                                                            <a routerLink="/more/academic-calendar"
+                                                            routerLinkActive="active">Academic Calendar</a>
                                                         </li>
                                                         <li class="current-menu-item">
-                                                            <a routerLink="/more/syllabus"
-                                                                routerLinkActive="active">Syllabus</a>
+                                                            <a (click)="openLinks('syllabus')">Syllabus</a>
                                                         </li>
                                                         <li class="menu-item-has-children current-menu-item">
                                                             <a routerLink="/more/paper" routerLinkActive="active">Old
                                                                 Question Papers</a>
                                                         </li>
                                                         <li class="menu-item-has-children current-menu-item">
-                                                            <a>Scholarships for Students</a>
+                                                            <a routerLink="/more/scholarship"
+                                                            routerLinkActive="active">Scholarships for Students</a>
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li class="">
-                                                    <a><span>Form</span></a>
+                                                <li>
+                                                    <a (click)="openLinks('forms')">Form</a>
                                                 </li>
-                                                <li class="">
-                                                    <a><span>Reports</span></a>
+                                                <li>
+                                                    <a (click)="openLinks('report')">Reports</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -429,11 +430,11 @@
                                                         <a>Student Corner</a>
                                                         <ul class="sub-menu">
                                                             <li class="menu-item-has-children current-menu-item">
-                                                                <a>Academic Calendar</a>
+                                                                <a routerLink="/more/academic-calendar"
+                                                                routerLinkActive="active">Academic Calendar</a>
                                                             </li>
                                                             <li class="current-menu-item">
-                                                                <a routerLink="/more/syllabus"
-                                                                    routerLinkActive="active">Syllabus</a>
+                                                                <a (click)="openLinks('syllabus')">Syllabus</a>
                                                             </li>
                                                             <li class="menu-item-has-children current-menu-item">
                                                                 <a routerLink="/more/paper"
@@ -441,17 +442,18 @@
                                                                     Question Papers</a>
                                                             </li>
                                                             <li class="menu-item-has-children current-menu-item">
-                                                                <a>Scholarships for Students</a>
+                                                                <a routerLink="/more/scholarship"
+                                                                routerLinkActive="active">Scholarships for Students</a>
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li class="">
-                                                        <a><span>Form</span></a>
+                                                    <li>
+                                                        <a (click)="openLinks('forms')">Form</a>
                                                     </li>
-                                                    <li class="">
-                                                        <a><span>Reports</span></a>
+                                                    <li>
+                                                        <a (click)="openLinks('report')">Reports</a>
 
-                                                        <a><span>Annual Reports</span></a>
+                                                        <a>Annual Reports</a>
 
                                                     </li>
                                                 </ul>
