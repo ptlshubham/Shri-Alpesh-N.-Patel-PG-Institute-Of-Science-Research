@@ -26,7 +26,6 @@ export class SyllabusComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       this.link = params['id'];
       this.getFormsDetails();
-
     });
   }
 
@@ -38,6 +37,8 @@ export class SyllabusComponent implements OnInit {
 
       if (this.link == 'syllabus') {
         this.openSyllabus = true;
+        this.openReport = false;
+        this.openForms = false;
         this.syllabusData = [];
         this.othersData.forEach((element: any) => {
           if (element.purpose == 'syllabus') {
@@ -47,6 +48,8 @@ export class SyllabusComponent implements OnInit {
       }
       else if (this.link == 'report') {
         this.openReport = true;
+        this.openSyllabus = false;
+        this.openForms = false;
         this.reportData = [];
         this.othersData.forEach((element: any) => {
           if (element.purpose == 'report') {
@@ -56,6 +59,8 @@ export class SyllabusComponent implements OnInit {
       }
       else if (this.link == 'forms') {
         this.openForms = true;
+        this.openReport = false;
+        this.openSyllabus = false;
         this.formsData = [];
         this.othersData.forEach((element: any) => {
           if (element.purpose == 'forms') {
