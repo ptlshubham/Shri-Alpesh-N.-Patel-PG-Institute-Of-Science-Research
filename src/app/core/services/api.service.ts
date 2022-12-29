@@ -71,6 +71,7 @@ export class ApiService {
   public static getOthersByIdDetailsURL: string = ApiService.HOST_URL + '/admin/GetOthersByIdDetails/';
   public static getScholarshipDetailsURL: string = ApiService.HOST_URL + '/admin/GetScholarshipDetails/';
   public static getQuestionPapersDetailsURL: string = ApiService.HOST_URL + '/admin/GetQuestionPapersDetails/';
+  public static getStudentListDataURL: string = ApiService.HOST_URL + '/admin/GetStudentListData/';
 
 
 

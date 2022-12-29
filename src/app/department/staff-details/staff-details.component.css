@@ -1,4 +1,8 @@
-.rs-team.style1 .team-item .content-part .social-links li {
-    display: block;
-    margin-right: 5px;
+
+.rs-team.style1 .team-item .content-part{
+    top:45% !important;
+}
+
+.textCustom{
+    color: white !important;
 }

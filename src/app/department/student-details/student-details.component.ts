@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from 'src/app/core/services/home.services';
 
 @Component({
   selector: 'app-student-details',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-details.component.css']
 })
 export class StudentDetailsComponent implements OnInit {
-
-  constructor() { }
+  studentList: any = [];
+ 
+  pa: number = 1;
+  constructor(
+    private homeService: HomeService,
+  ) { }
 
   ngOnInit(): void {
+    this.getStaffDetails();
+  }
+  getStaffDetails() {
+    this.homeService.getStudentList(localStorage.getItem('InstituteId')).subscribe((res: any) => {
+      this.studentList = res;
+    })
   }
 
 }

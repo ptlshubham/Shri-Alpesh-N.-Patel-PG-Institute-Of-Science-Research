@@ -109,4 +109,7 @@ export class HomeService {
     getQuestionData(id: any) {
         return this.http.get(ApiService.getQuestionPapersDetailsURL + id);
     }
+    getStudentList(id: any) {
+        return this.http.get(ApiService.getStudentListDataURL + id);
+    }
 }
