@@ -9,10 +9,8 @@ import { HomeService } from 'src/app/core/services/home.services';
 export class NewsComponent implements OnInit {
 
   public newsData: any = [];
-  public newsData1: any = [];
-  public newsData2: any = [];
-
   public start: number = 0;
+  
   constructor(
     private homeService: HomeService
   ) { }
@@ -21,7 +19,7 @@ export class NewsComponent implements OnInit {
     this.getNewsDetails();
   }
   getNewsDetails() {
-    this.homeService.getNewsOnlyForCESURL(localStorage.getItem('InstituteId')).subscribe((res: any=[]) => {
+    this.homeService.getAllNewsDataForInstitute(localStorage.getItem('InstituteId')).subscribe((res: any=[]) => {
       this.newsData = res.slice(0);
 
     })

@@ -40,7 +40,11 @@
                                     <div class="course-overview">
                                         <div class="inner-box ">
                                             <div class="rs-degree style1 modify  pt-10 pb-70 md-pt-70 md-pb-40">
-                                                <div class="row">
+                                                <h4 style="color: red;text-align: center;"
+                                                    *ngIf="syllabusData.length==0">
+                                                    Data
+                                                    Not Found !</h4>
+                                                <div class="row" *ngIf="syllabusData.length>0">
                                                     <div class="col-lg-3 mb-30 col-md-3"
                                                         *ngFor="let c of syllabusData | paginate: {id:'listing1', itemsPerPage: 12, currentPage: pa };let i=index">
                                                         <div class="gallery-img">
@@ -54,9 +58,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <pagination-controls id="listing1" (pageChange)="pa = $event">
-                                                    </pagination-controls>
+                                                <div class="row mt-3" *ngIf="syllabusData.length>0">
+                                                    <div class="row">
+                                                        <div class="col text-end">
+                                                            <pagination-controls id="listing1"
+                                                                (pageChange)="pa = $event">
+                                                            </pagination-controls>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,7 +91,10 @@
                                     <div class="course-overview">
                                         <div class="inner-box ">
                                             <div class="rs-degree style1 modify  pt-10 pb-70 md-pt-70 md-pb-40">
-                                                <div class="row">
+                                                <h4 style="color: red;text-align: center;" *ngIf="formsData.length==0">
+                                                    Data
+                                                    Not Found !</h4>
+                                                <div class="row" *ngIf="formsData.length>0">
                                                     <div class="col-lg-3 mb-30 col-md-3"
                                                         *ngFor="let c of formsData | paginate: {id:'listing1', itemsPerPage: 12, currentPage: pa };let i=index">
                                                         <div class="gallery-img">
@@ -96,9 +108,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <pagination-controls id="listing1" (pageChange)="pa = $event">
-                                                    </pagination-controls>
+                                                <div class="row mt-3" *ngIf="formsData.length>0">
+                                                    <div class="row">
+                                                        <div class="col text-end">
+                                                            <pagination-controls id="listing1"
+                                                                (pageChange)="pa = $event">
+                                                            </pagination-controls>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -124,7 +141,10 @@
                                     <div class="course-overview">
                                         <div class="inner-box ">
                                             <div class="rs-degree style1 modify  pt-10 pb-70 md-pt-70 md-pb-40">
-                                                <div class="row">
+                                                <h4 style="color: red;text-align: center;" *ngIf="reportData.length==0">
+                                                    Data
+                                                    Not Found !</h4>
+                                                <div class="row" *ngIf="reportData.length>0">
                                                     <div class="col-lg-3 mb-30 col-md-3"
                                                         *ngFor="let c of reportData | paginate: {id:'listing1', itemsPerPage: 12, currentPage: pa };let i=index">
                                                         <div class="gallery-img">
@@ -138,9 +158,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <pagination-controls id="listing1" (pageChange)="pa = $event">
-                                                    </pagination-controls>
+                                                <div class="row mt-3" *ngIf="reportData.length>0">
+                                                    <div class="row">
+                                                        <div class="col text-end">
+                                                            <pagination-controls id="listing1"
+                                                                (pageChange)="pa = $event">
+                                                            </pagination-controls>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

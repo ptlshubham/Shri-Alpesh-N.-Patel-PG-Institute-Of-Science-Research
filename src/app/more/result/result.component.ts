@@ -8,6 +8,7 @@ import { HomeService } from 'src/app/core/services/home.services';
 })
 export class ResultComponent implements OnInit {
   resultData: any = [];
+  pa: number = 1;
   constructor(
     private homeService: HomeService
   ) { }
@@ -18,27 +19,27 @@ export class ResultComponent implements OnInit {
   getResultDataById() {
     this.homeService.getResultDetailsById(localStorage.getItem('InstituteId')).subscribe((res: any) => {
       this.resultData = res;
-      this.resultData.forEach((element:any,index:any) => {
-        
-          element.cols = false;
-        
+      this.resultData.forEach((element: any, index: any) => {
+
+        element.cols = false;
+
       });
     })
   }
-  open(i:any){
+  open(i: any) {
     this.resultData[i].cols = true;
-    this.resultData.forEach((element:any,index:any) => {
-      if(index==i){
+    this.resultData.forEach((element: any, index: any) => {
+      if (index == i) {
         element.cols = true;
-      }else{
+      } else {
         element.cols = false;
       }
     });
   }
-  close(i:any){
+  close(i: any) {
     this.resultData[i].cols = true;
-    this.resultData.forEach((element:any,index:any) => {
-    element.cols=false;
+    this.resultData.forEach((element: any, index: any) => {
+      element.cols = false;
     });
   }
 }

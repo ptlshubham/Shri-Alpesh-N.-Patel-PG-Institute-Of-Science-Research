@@ -45,17 +45,23 @@
                         <div class="container">
                             <div class="main-part">
                                 <div class="faq-content">
-                                    <div class="accordion pt-40" id="accordionExample">
-                                        <h4>Result List</h4>
-                                        <div class="accordion-item card" *ngFor="let r of resultData;let i=index">
+                                    <h4 class="pt-40">Result List</h4>
+
+                                    <h4 style="color: red;text-align: center;" *ngIf="resultData.length==0">
+                                        Data
+                                        Not Found !</h4>
+                                    <div class="accordion" id="accordionExample" *ngIf="resultData.length>0">
+
+                                        <div class="accordion-item card"
+                                            *ngFor="let r of resultData| paginate: {id:'listing1', itemsPerPage: 20, currentPage: pa };let i=index">
                                             <div class="accordion-header card-header" id="headingOne" (click)="open(i)">
                                                 <button class="accordion-button card-link" type="button"
-                                                     data-bs-target="#collapseOne"
-                                                    aria-expanded="true"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
                                                     aria-controls="collapseOne">{{r.title}}</button>
                                             </div>
-                                            <div id="collapseOne" class="accordion-collapse" *ngIf="r.cols" (click)="open(i)"
-                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div id="collapseOne" class="accordion-collapse" *ngIf="r.cols"
+                                                (click)="open(i)" aria-labelledby="headingOne"
+                                                data-bs-parent="#accordionExample">
                                                 <div class="accordion-body card-body">
                                                     <div class="row">
                                                         <div class="col-lg-12">
@@ -64,6 +70,12 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3" *ngIf="resultData.length>0">
+                                        <div class="col text-end">
+                                            <pagination-controls id="listing1" (pageChange)="pa = $event">
+                                            </pagination-controls>
                                         </div>
                                     </div>
                                 </div>

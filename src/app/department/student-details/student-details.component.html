@@ -1,4 +1,5 @@
 <app-header></app-header>
+
 <body class="defult-home">
     <style>
         table {
@@ -32,6 +33,9 @@
                             <div class="course-features-info">
                                 <div class="row">
                                     <h3 style="text-align: center;">Students Details</h3>
+                                    <h4 style="color: red;text-align: center;" *ngIf="studentList.length==0">
+                                        Data
+                                        Not Found !</h4>
                                     <div class="col-sm-6 col-lg-6"
                                         *ngFor="let s of studentList | paginate: {id:'listing1', itemsPerPage: 6, currentPage: pa };let i=index">
                                         <h5 style="text-align: center;">{{s.title}}</h5>
@@ -39,7 +43,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-3" *ngIf="studentList.length>0">
                                 <div class="col text-end">
                                     <pagination-controls id="listing1" (pageChange)="pa = $event"></pagination-controls>
                                 </div>
