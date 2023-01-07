@@ -50,6 +50,7 @@ export class ContactComponent implements OnInit {
     this.homeService.saveContactUsDetails(this.contactModel).subscribe((res: any) => {
       if (res == 'success') {
         this.submitted = false;
+        this.contactModel = {};
         this.toastrMessage.success('Thank you for valuable feedback.', 'Success', { timeOut: 3000, });
       }
     })
