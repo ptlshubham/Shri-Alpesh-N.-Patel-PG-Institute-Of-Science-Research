@@ -1,8 +1,7 @@
 <app-header></app-header>
-<div class="content white-bg pt-30">
+<div class="content white-bg pt-30 md-pt-64">
     <div class="course-overview">
         <div class="inner-box">
-            <h4> INFRASTRUCTURE AND FACILITIES</h4>
             <div class="row">
                 <div class="col-md-12">
                     <div class="main-content">
@@ -14,8 +13,11 @@
                         <div class="rs-faq-part rs-about style1">
                             <div class="container">
                                 <div class="main-part">
-                                    <div class="faq-content" style="margin-top: 20px;">
-                                        <div class="accordion pt-50" id="accordionExample">
+                                    <div class="faq-content">
+                                        <div class="accordion pt-30" id="accordionExample">
+                                            <h4 class="pb-30" style="text-align: center;"> INFRASTRUCTURE AND FACILITIES
+                                            </h4>
+
                                             <h4 style="color: red;text-align: center;" *ngIf="infraData.length==0">Data
                                                 Not Found !</h4>
                                             <div class="row" *ngIf="infraData.length>0">
