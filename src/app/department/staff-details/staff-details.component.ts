@@ -41,13 +41,17 @@ export class StaffDetailsComponent implements OnInit {
   }
   slectAll(val: any) {
     this.selectedDepartment = val;
+   
+
     this.getStaffDetails();
   }
   getStaffDetails() {
     this.filterData = [];
     this.staffService.getAllStaffDetailsData(localStorage.getItem('InstituteId')).subscribe((res: any) => {
       this.staffDataTable = res;
+      if(this.selectedDepartment=='all'){
       this.filterData = res;
+      }
 
     })
   }
