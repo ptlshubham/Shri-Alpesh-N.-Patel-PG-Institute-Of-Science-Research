@@ -20,7 +20,7 @@ export class RightImageTextComponent implements OnInit {
   }
   getNewsDetails() {
     this.homeService.getAllNewsDataForInstitute(localStorage.getItem('InstituteId')).subscribe((res: any=[]) => {
-      this.newsData = res.slice(0,4);
+      this.newsData = res.slice(0,3);
     })
   }
 }
