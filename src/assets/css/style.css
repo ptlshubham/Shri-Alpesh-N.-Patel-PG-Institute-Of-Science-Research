@@ -8312,8 +8312,8 @@ body .modal-backdrop {
   opacity: 0;
 }
 .rs-team.style1 .team-item .content-part .name {
-  margin-bottom: 8px;
-  font-size: 22px;
+  margin-bottom: 2px;
+  font-size: 18px;
 }
 .rs-team.style1 .team-item .content-part .name a {
   color: #ffffff;

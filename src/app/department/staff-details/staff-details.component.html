@@ -22,8 +22,9 @@
             </div>
         </div>
         <div class="row">
-            <h4 style="color: red;text-align: center;" *ngIf="filterData.length==0">Please Select Department for staff details.
-               </h4>
+            <h4 style="color: red;text-align: center;" *ngIf="filterData.length==0">Please Select Department for staff
+                details.
+            </h4>
             <div class="col-lg-3 col-sm-6 mb-30"
                 *ngFor="let s of filterData | paginate: {id:'listing1', itemsPerPage: 12, currentPage: pa };let i=index">
                 <div class="team-item">
@@ -36,6 +37,11 @@
                             <li><a class="textCustom" href="mailto:{{s.email}}">{{s.email}}</a>
                             </li>
                             <li>Birthday : {{s.birthday_date|date}}</li>
+                            <li *ngIf="s.researchPaper!=null ||undefined"><u><a
+                                        href="http://localhost:9000{{s.researchPaper}}" target="_blank"
+                                        class="text-white">Read More <i class="fa fa-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </a></u></li>
                         </ul>
                     </div>
                 </div>
