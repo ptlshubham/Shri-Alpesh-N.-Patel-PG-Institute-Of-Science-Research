@@ -36,7 +36,7 @@
                             <li>{{s.qualification}}</li>
                             <li><a class="textCustom" href="mailto:{{s.email}}">{{s.email}}</a>
                             </li>
-                            <li>Date of Joining : {{s.birthday_date|date}}</li>
+                            <li>Date of Joining : {{s.joining_date|date}}</li>
                             <li *ngIf="s.researchPaper!=null ||undefined"><u><a
                                         href="http://localhost:9000{{s.researchPaper}}" target="_blank"
                                         class="text-white">Read More <i class="fa fa-arrow-right"
