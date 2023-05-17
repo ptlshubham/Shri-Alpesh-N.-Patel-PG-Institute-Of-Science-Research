@@ -11,7 +11,8 @@ import { HomeModule } from '../home/home.module';
 import { InfrastructureComponent } from './infrastructure/infrastructure.component';
 import { ActivityComponent } from './activity/activity.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 
@@ -31,7 +32,9 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
     HomeModule,
     NgbDropdownModule,
     FormsModule,
-    ReactiveFormsModule
+    NgbModule,
+    ReactiveFormsModule,
+    CarouselModule
 
   ]
 })

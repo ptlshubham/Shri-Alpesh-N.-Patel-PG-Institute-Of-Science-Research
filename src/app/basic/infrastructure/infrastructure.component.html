@@ -18,10 +18,10 @@
                                             <h4 class="pb-30" style="text-align: center;"> INFRASTRUCTURE AND FACILITIES
                                             </h4>
 
-                                            <h4 style="color: red;text-align: center;" *ngIf="infraData.length==0">Data
+                                            <h4 style="color: red;text-align: center;" *ngIf="mainData.length==0">Data
                                                 Not Found !</h4>
-                                            <div class="row" *ngIf="infraData.length>0">
-                                                <div class="col-sm-6 mb-3" *ngFor="let r of infraData;let i=index">
+                                            <div class="row" *ngIf="mainData.length>0">
+                                                <div class="col-sm-6 mb-3" *ngFor="let r of mainData;let i=index">
                                                     <div class="accordion-item card">
                                                         <div class="accordion-header card-header" id="headingThree"
                                                             (click)="open(i)">
@@ -37,8 +37,19 @@
                                                                 <div class="row">
                                                                     <div class="col-lg-12"
                                                                         *ngIf="r.infraImage!='undefined'">
-                                                                        <img src="http://localhost:9000{{r.infraImage}}"
-                                                                            alt="infra">
+                                                                        <ngb-carousel [showNavigationArrows]="true"
+                                                                            [showNavigationIndicators]="true"
+                                                                            [interval]="2000" [keyboard]="true"
+                                                                            [pauseOnHover]="true" [wrap]="true"
+                                                                            [activeId]="'slideTwo'" class="carousel">
+                                                                            <ng-template ngbSlide
+                                                                                *ngFor="let c of r.multiImage;let i=index">
+                                                                                <div class="picsum-img-wrapper">
+                                                                                    <img src="http://localhost:9000{{c.image}}"
+                                                                                        alt="Random first slide">
+                                                                                </div>
+                                                                            </ng-template>
+                                                                        </ngb-carousel>
                                                                     </div>
                                                                     <div class="col-lg-12 mt-1">
                                                                         <div [innerHTML]="r.infraDetails"></div>

@@ -8,6 +8,8 @@ import { HomeService } from 'src/app/core/services/home.services';
 })
 export class InfrastructureComponent implements OnInit {
   infraData: any = [];
+  multiImage: any = [];
+  mainData: any = [];
   constructor(
     private homeService: HomeService
   ) { }
@@ -15,29 +17,60 @@ export class InfrastructureComponent implements OnInit {
   ngOnInit(): void {
     this.getInfraDataById();
   }
-  getInfraDataById() {
-    this.homeService.getImfraDetails(localStorage.getItem('InstituteId')).subscribe((res: any) => {
-      this.infraData = res;
-      this.infraData.forEach((element:any,index:any) => {
-        element.cols = false;
-      
-    });
+  getInfraMultiImages(id: any) {
+    this.homeService.getInfraMultiImageById(id).subscribe((res: any) => {
+      this.multiImage = res;
     })
   }
-  open(i:any){
-    this.infraData[i].cols = true;
-    this.infraData.forEach((element:any,index:any) => {
-      if(index==i){
+  getInfraDataById() {
+    this.homeService.getInfraDetails(localStorage.getItem('InstituteId')).subscribe((res: any) => {
+      this.infraData = res;
+      debugger
+      this.infraData.forEach((element: any) => {
+        if (element.id) {
+          this.homeService.getInfraMultiImageById(element.id).subscribe((res: any) => {
+            this.multiImage = res;
+            this.mainData.push(
+              {
+                id: element.id,
+                institute_id: element.institute_id,
+                infraTitle: element.infraTitle,
+                infraDetails: element.infraDetails,
+                infraImage: element.infraImage,
+                createddate: element.createddate,
+                updateddate: element.updateddate,
+                multiImage: this.multiImage,
+              });
+              this.multiImage.push(
+                {
+                  image:element.infraImage
+                }
+              )
+
+          })
+        }
+        
+      });
+      this.mainData.forEach((element: any, index: any) => {
+        element.cols = false;
+
+      });
+    })
+  }
+  open(i: any) {
+    this.mainData[i].cols = true;
+    this.mainData.forEach((element: any, index: any) => {
+      if (index == i) {
         element.cols = true;
-      }else{
+      } else {
         element.cols = false;
       }
     });
   }
-  close(i:any){
-    this.infraData[i].cols = true;
-    this.infraData.forEach((element:any,index:any) => {
-    element.cols=false;
+  close(i: any) {
+    this.mainData[i].cols = true;
+    this.mainData.forEach((element: any, index: any) => {
+      element.cols = false;
     });
   }
 

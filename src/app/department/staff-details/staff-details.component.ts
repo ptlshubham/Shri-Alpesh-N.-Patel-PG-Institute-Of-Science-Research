@@ -36,6 +36,7 @@ export class StaffDetailsComponent implements OnInit {
     this.staffDataTable.forEach((element: any) => {
       if (element.departmentName == this.selectedDepartment) {
         this.filterData.push(element);
+        debugger
       }
     });
   }
@@ -51,6 +52,7 @@ export class StaffDetailsComponent implements OnInit {
       this.staffDataTable = res;
       if(this.selectedDepartment=='all'){
       this.filterData = res;
+      debugger
       }
 
     })

@@ -72,8 +72,11 @@ export class HomeService {
 
         return this.http.post(ApiService.saveInfrastructureDetailsURL, data);
     }
-    getImfraDetails(id: any) {
+    getInfraDetails(id: any) {
         return this.http.get(ApiService.getInfraDetailsByIdURL + id);
+    }
+    getInfraMultiImageById(id: any) {
+        return this.http.get(ApiService.getInfraMultiImageByIdURL + id);
     }
     saveAlumniDetail(data: any) {
         return this.http.post(ApiService.SaveAlumniDetailsURL, data);

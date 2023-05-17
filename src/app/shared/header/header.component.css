@@ -386,3 +386,58 @@ a {
   width: 400px;
   margin: 0;
 }
+
+
+@media (min-width:320px) {
+  .full-width-header .rs-header .logo-part img {
+    max-height: 54px !important;
+    margin-top: -23px;
+  }
+}
+
+@media (min-width:481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .full-width-header .rs-header .logo-part img {
+    max-height: 56px !important;
+    margin-top: -21px;
+  }
+}
+
+@media (min-width:641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .full-width-header .rs-header .logo-part img {
+    max-height: 52px !important;
+    margin-top: -23px;
+  }
+}
+
+@media (min-width:961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .full-width-header .rs-header .logo-part img {
+    max-height: 72px !important;
+    margin-top: -8px;
+  }
+}
+
+@media (min-width:1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .full-width-header .rs-header .logo-part img {
+    max-height: 94px !important;
+    margin-top: -8px;
+  }
+}
+
+@media (min-width:1281px) {
+  /* hi-res laptops and desktops */
+  .full-width-header .rs-header .logo-part img {
+    max-height: 94px !important;
+    margin-top: -8px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .full-width-header .rs-header .logo-part img {
+    max-height: 94px !important;
+    margin-top: -8px;
+  }
+}
