@@ -115,4 +115,22 @@ export class HomeService {
     getStudentList(id: any) {
         return this.http.get(ApiService.getStudentListDataURL + id);
     }
+    getNAACData() {
+        return this.http.get(ApiService.getNaacDataURL);
+    }
+    getKeyNoGroup(id: any) {
+        let data = {
+            criteria: id
+        };
+        return this.http.post(ApiService.getKeyNoDataGroupByURL, data);
+    }
+    getCriteriaGroup() {
+        return this.http.get(ApiService.getKeyNoDataGroupByURL);
+    }
+    sendCriteriaDetails(id: any) {
+        let data = {
+            criteria: id
+        };
+        return this.http.post(ApiService.sendCriteriaDetailsURL, data);
+    }
 }

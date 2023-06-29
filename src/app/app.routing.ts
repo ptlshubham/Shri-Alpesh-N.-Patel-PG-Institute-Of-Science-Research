@@ -28,6 +28,10 @@ export const AppRoutes: Routes = [
         loadChildren: () => import('./course/course.module').then(m => m.CourseModule)
     },
     {
+        path: 'iqac',
+        loadChildren: () => import('./iqac/iqac.module').then(m => m.IqacModule)
+    },
+    {
         path: 'more',
         loadChildren: () => import('./more/more.module').then(m => m.MoreModule)
     },

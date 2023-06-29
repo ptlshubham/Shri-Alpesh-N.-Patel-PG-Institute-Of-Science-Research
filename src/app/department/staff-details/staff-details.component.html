@@ -28,7 +28,7 @@
             <div class="col-lg-3 col-sm-6 mb-30"
                 *ngFor="let s of filterData | paginate: {id:'listing1', itemsPerPage: 12, currentPage: pa };let i=index">
                 <div class="team-item">
-                    <img src="http://localhost:9000{{s.profile_image}}" alt="">
+                    <img src="https://bapsanandmandir.co.in{{s.profile_image}}" alt="">
                     <div class="content-part">
                         <h4 class="name textCustom" style="color: white !important;">{{s.name}}</h4>
                         <span class="textCustom">{{s.designation}}</span>
@@ -38,7 +38,7 @@
                             </li>
                             <li>Joining Date : {{s.joining_date|date}}</li>
                             <li *ngIf="s.researchPaper !='undefined'"><u><a
-                                        href="http://localhost:9000{{s.researchPaper}}" target="_blank"
+                                        href="https://bapsanandmandir.co.in{{s.researchPaper}}" target="_blank"
                                         class="text-white">Read More <i class="fa fa-arrow-right"
                                             aria-hidden="true"></i>
                                     </a></u></li>
