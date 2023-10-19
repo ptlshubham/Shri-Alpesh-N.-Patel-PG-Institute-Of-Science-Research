@@ -133,4 +133,7 @@ export class HomeService {
         };
         return this.http.post(ApiService.sendCriteriaDetailsURL, data);
     }
+    getCommeteeDetails(id: any) {
+        return this.http.get(ApiService.getCommitteeDetailsByIdURL + id);
+    }
 }
