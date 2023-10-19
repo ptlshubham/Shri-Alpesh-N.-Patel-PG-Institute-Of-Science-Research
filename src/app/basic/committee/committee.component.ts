@@ -8,28 +8,57 @@ import { HomeService } from 'src/app/core/services/home.services';
 })
 export class CommitteeComponent implements OnInit {
   commiData: any = [];
+  multiImage: any = [];
+  mainData: any = [];
+
   constructor(
     private homeService: HomeService
   ) { }
 
   ngOnInit(): void {
     this.getCommeteeDataById();
+
   }
   getCommeteeDataById() {
     this.homeService.getCommeteeDetails(localStorage.getItem('InstituteId')).subscribe((res: any) => {
       this.commiData = res;
-      debugger
-      for (let i = 0; i < this.commiData.length; i++) {
-        this.commiData[i].index = i + 1;
+      this.commiData.forEach((element: any) => {
+        if (element.id) {
+          this.homeService.getCommiteeMultiImageById(element.id).subscribe((res: any) => {
+              this.multiImage = res;
+              this.mainData.push(
+                {
+                  id: element.id,
+                  institute_id: element.institute_id,
+                  commTitle: element.commTitle,
+                  commDetails: element.commDetails,
+                  commImage: element.commImage,
+                  createddate: element.createddate,
+                  updateddate: element.updateddate,
+                  multiImage: this.multiImage,
+                  cols:false
+                });
+                if(this.commiData.length == this.mainData.length){
+                  this.open(0);   
+                }
+              this.multiImage.push(
+                {
+                  image: element.commImage
+                }
+              )
+          });
+        }
+      });
+      for (let i = 0; i < this.mainData.length; i++) {
+        this.mainData[i].index = i + 1;
       }
-      if(this.commiData.length>0){
-        this.commiData[0].cols=true;
-      }
+       
     })
   }
   open(i: any) {
-    this.commiData[i].cols = true;
-    this.commiData.forEach((element: any, index: any) => {
+    this.mainData[i].cols = true;
+    debugger
+    this.mainData.forEach((element: any, index: any) => {
       if (index == i) {
         element.cols = true;
       } else {

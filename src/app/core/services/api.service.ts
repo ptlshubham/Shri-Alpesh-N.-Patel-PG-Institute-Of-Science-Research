@@ -79,6 +79,7 @@ export class ApiService {
   public static getCriteriaGroupByURL: string = ApiService.HOST_URL + '/admin/getCriteriaGroupBy';
   public static sendCriteriaDetailsURL: string = ApiService.HOST_URL + '/admin/SendCriteriaDetails';
   public static getCommitteeDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetCommitteeDetailsById/';
+  public static getCommitteeMultiImagesByIdURL: string = ApiService.HOST_URL + '/admin/GetCommitteeMultiImagesById/';
 
 
 

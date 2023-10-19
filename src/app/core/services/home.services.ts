@@ -136,4 +136,7 @@ export class HomeService {
     getCommeteeDetails(id: any) {
         return this.http.get(ApiService.getCommitteeDetailsByIdURL + id);
     }
+    getCommiteeMultiImageById(id: any) {
+        return this.http.get(ApiService.getCommitteeMultiImagesByIdURL + id);
+    }
 }
