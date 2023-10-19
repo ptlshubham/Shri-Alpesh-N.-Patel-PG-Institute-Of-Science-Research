@@ -22,6 +22,19 @@ export class CommitteeComponent implements OnInit {
       for (let i = 0; i < this.commiData.length; i++) {
         this.commiData[i].index = i + 1;
       }
+      if(this.commiData.length>0){
+        this.commiData[0].cols=true;
+      }
     })
+  }
+  open(i: any) {
+    this.commiData[i].cols = true;
+    this.commiData.forEach((element: any, index: any) => {
+      if (index == i) {
+        element.cols = true;
+      } else {
+        element.cols = false;
+      }
+    });
   }
 }
