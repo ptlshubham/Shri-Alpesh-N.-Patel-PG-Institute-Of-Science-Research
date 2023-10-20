@@ -23,6 +23,8 @@ export class HeaderComponent implements OnInit {
   navContact: any;
   navEmail: any;
   navLogo: any;
+  marqueeData: any = [];
+  sliderNews: any = [];
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
@@ -41,6 +43,7 @@ export class HeaderComponent implements OnInit {
     // config.keyboard = false;
     this.getStaffDetails();
     this.getLastUpdateSite();
+    this.getNewsMaruqeeDetails();
   }
   moreOpen() {
     this.readMore = true;
@@ -52,7 +55,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/more/search', id]);
 
   }
-  openLinks(id:any){
+  openLinks(id: any) {
     this.router.navigate(['/more/links', id]);
   }
   getStaffDetails() {
@@ -63,6 +66,17 @@ export class HeaderComponent implements OnInit {
   getLastUpdateSite() {
     this.homeService.getLastUpdateSiteByIdURL(localStorage.getItem('InstituteId')).subscribe((res: any) => {
       this.siteUpdate = res[0];
+    })
+  }
+  getNewsMaruqeeDetails() {
+    this.sliderNews = [];
+    this.homeService.getNaacLinkDetails().subscribe((res: any) => {
+      this.marqueeData = res;
+      this.marqueeData.forEach((element: any) => {
+        if (element.criteria == 'Slider News') {
+          this.sliderNews.push(element);
+        }
+      });
     })
   }
 }

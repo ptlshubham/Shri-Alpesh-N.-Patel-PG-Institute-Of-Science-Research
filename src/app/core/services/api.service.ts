@@ -80,6 +80,7 @@ export class ApiService {
   public static sendCriteriaDetailsURL: string = ApiService.HOST_URL + '/admin/SendCriteriaDetails';
   public static getCommitteeDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetCommitteeDetailsById/';
   public static getCommitteeMultiImagesByIdURL: string = ApiService.HOST_URL + '/admin/GetCommitteeMultiImagesById/';
+  public static getNaacLinkDataURL: string = ApiService.HOST_URL + '/admin/GetNaacLinkData';
 
 
 

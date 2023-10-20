@@ -207,7 +207,8 @@
 
                     <li class="btn-group">
                         <a class="btn btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            routerLink="/basic/infrastructure" routerLinkActive="active">Infrastructure and Facilities</a>
+                            routerLink="/basic/infrastructure" routerLinkActive="active">Infrastructure
+                            and Facilities</a>
 
                     </li>
                     <li class="btn-group">
@@ -247,7 +248,8 @@
                             <!-- <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Department</a> </li> -->
                             <li><a class="dropdown-item" routerLink="/more/result" routerLinkActive="active">Results</a>
                             </li>
-                            <li><a class="dropdown-item" routerLink="/more/news" routerLinkActive="active">News & Events</a>
+                            <li><a class="dropdown-item" routerLink="/more/news" routerLinkActive="active">News &
+                                    Events</a>
                             </li>
                             <li><a class="dropdown-item" routerLink="/basic/committee"
                                     routerLinkActive="active">Committee</a> </li>
@@ -264,7 +266,6 @@
             </div>
         </nav>
         <!-- MOBILEMENU -->
-
         <div class="menu-area menu-sticky">
             <!-- main-menu -->
             <div class="container" style="max-width:1750px;">
@@ -345,7 +346,8 @@
                                                 <li><a routerLink="/more/result" routerLinkActive="active">Results</a>
                                                 </li>
                                                 <li>
-                                                    <a routerLink="/more/news" routerLinkActive="active">News & Events</a>
+                                                    <a routerLink="/more/news" routerLinkActive="active">News &
+                                                        Events</a>
                                                 </li>
                                                 <li>
                                                     <a routerLink="/basic/committee"
@@ -472,7 +474,8 @@
                                                     <li><a routerLink="/more/result"
                                                             routerLinkActive="active">Results</a>
                                                     </li>
-                                                    <li><a routerLink="/more/news" routerLinkActive="active">News & Events</a>
+                                                    <li><a routerLink="/more/news" routerLinkActive="active">News &
+                                                            Events</a>
                                                     </li>
                                                     <li>
                                                         <a routerLink="/basic/committee"
@@ -543,7 +546,8 @@
                         <p style="text-align: center;"><strong>{{i+1}}</strong></p>
                     </div>
                     <div class="col-2">
-                        <img src="https://api.cesociety.in{{s.profile_image}}" class="img-thumbnail" alt="wedrfgthyuj" />
+                        <img src="https://api.cesociety.in{{s.profile_image}}" class="img-thumbnail"
+                            alt="wedrfgthyuj" />
                     </div>
                     <div class="col-5">
                         <p>
@@ -581,6 +585,20 @@
                     <i class="fa fa-times" aria-hidden="true"></i> Close</button>
             </div>
         </ng-template>
+        <div class="topbar-area" style="background-color: white;">
+            <div class="container">
+                <div class="row y-middle">
+                    <marquee class="marq" direction="left" loop="">
+                        <div class="primary-color">
+                            <span class="marq-text" *ngFor="let s of sliderNews">
+                                <a href="https://api.cesociety.in{{s.link}}" target="blank"
+                                    > {{s.criteria}} </a>
+                                <span *ngIf="sliderNews.length>=1">|</span></span>
+                        </div>
+                    </marquee>
+                </div>
+            </div>
+        </div>
     </header>
 
 </div>
