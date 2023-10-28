@@ -3865,12 +3865,12 @@ ul.listing-style.modify li:before {
   background: #ffffff !important;
 }
 .full-width-header.home1-modifiy .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li {
-  margin-right: 35px !important;
+  margin-right: 20px !important;
 }
 .full-width-header.home1-modifiy .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li a {
   color: #ffffff !important;
   font-weight: 400 !important;
-  padding-right: 18px !important;
+  padding-right: 12px !important;
   margin-right: unset !important;
 }
 .full-width-header.home1-modifiy .rs-header .menu-area .rs-menu-area .main-menu .rs-menu ul.nav-menu li a:hover {
