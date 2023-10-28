@@ -23,38 +23,66 @@ export class InfrastructureComponent implements OnInit {
     })
   }
   getInfraDataById() {
-    this.homeService.getInfraDetails(localStorage.getItem('InstituteId')).subscribe((res: any) => {
+    this.homeService.getInfraDetails(localStorage.getItem('InstituteId')).subscribe(async (res: any) => {
       this.infraData = res;
       debugger
-      this.infraData.forEach((element: any) => {
-        if (element.id) {
-          this.homeService.getInfraMultiImageById(element.id).subscribe((res: any) => {
+      for(let i=0;i<this.infraData.length;i++){
+        if(this.infraData[i].id){
+        await  this.homeService.getInfraMultiImageById(this.infraData[i].id).toPromise().then((res: any) => {
             this.multiImage = res;
             this.mainData.push(
               {
-                id: element.id,
-                institute_id: element.institute_id,
-                infraTitle: element.infraTitle,
-                infraDetails: element.infraDetails,
-                infraImage: element.infraImage,
-                createddate: element.createddate,
-                updateddate: element.updateddate,
+                id: this.infraData[i].id,
+                institute_id: this.infraData[i].institute_id,
+                infraTitle: this.infraData[i].infraTitle,
+                infraDetails: this.infraData[i].infraDetails,
+                infraImage: this.infraData[i].infraImage,
+                createddate: this.infraData[i].createddate,
+                updateddate: this.infraData[i].updateddate,
                 multiImage: this.multiImage,
+                cols:false
               });
               this.multiImage.push(
                 {
-                  image:element.infraImage
+                  image:this.infraData[i].infraImage
                 }
-              )
+              );
+              // if(this.mainData.length == this.infraData.length){
 
+              // }
           })
         }
-        
-      });
-      this.mainData.forEach((element: any, index: any) => {
-        element.cols = false;
+       
+      }
+      // this.infraData.forEach((element: any) => {
+      //   if (element.id) {
+      //     this.homeService.getInfraMultiImageById(element.id).subscribe((res: any) => {
+      //       this.multiImage = res;
+      //       this.mainData.push(
+      //         {
+      //           id: element.id,
+      //           institute_id: element.institute_id,
+      //           infraTitle: element.infraTitle,
+      //           infraDetails: element.infraDetails,
+      //           infraImage: element.infraImage,
+      //           createddate: element.createddate,
+      //           updateddate: element.updateddate,
+      //           multiImage: this.multiImage,
+      //         });
+      //         this.multiImage.push(
+      //           {
+      //             image:element.infraImage
+      //           }
+      //         )
 
-      });
+      //     })
+      //   }
+        
+      // });
+      // this.mainData.forEach((element: any, index: any) => {
+      //   element.cols = false;
+
+      // });
     })
   }
   open(i: any) {

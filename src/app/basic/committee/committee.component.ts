@@ -20,38 +20,67 @@ export class CommitteeComponent implements OnInit {
 
   }
   getCommeteeDataById() {
-    this.homeService.getCommeteeDetails(localStorage.getItem('InstituteId')).subscribe((res: any) => {
+    this.homeService.getCommeteeDetails(localStorage.getItem('InstituteId')).subscribe(async (res: any) => {
       this.commiData = res;
-      this.commiData.forEach((element: any) => {
-        if (element.id) {
-          this.homeService.getCommiteeMultiImageById(element.id).subscribe((res: any) => {
+      for(let i=0;i<this.commiData.length;i++){
+        if (this.commiData[i].id) {
+          await this.homeService.getCommiteeMultiImageById(this.commiData[i].id).toPromise().then((res: any) => {
               this.multiImage = res;
               this.mainData.push(
                 {
-                  id: element.id,
-                  institute_id: element.institute_id,
-                  commTitle: element.commTitle,
-                  commDetails: element.commDetails,
-                  commImage: element.commImage,
-                  createddate: element.createddate,
-                  updateddate: element.updateddate,
+                  id: this.commiData[i].id,
+                  institute_id: this.commiData[i].institute_id,
+                  commTitle: this.commiData[i].commTitle,
+                  commDetails: this.commiData[i].commDetails,
+                  commImage: this.commiData[i].commImage,
+                  createddate: this.commiData[i].createddate,
+                  updateddate: this.commiData[i].updateddate,
                   multiImage: this.multiImage,
-                  cols:false
+                  cols:false,
+                  index:i+1
                 });
                 if(this.commiData.length == this.mainData.length){
                   this.open(0);   
                 }
               this.multiImage.push(
                 {
-                  image: element.commImage
+                  image: this.commiData[i].commImage
                 }
               )
           });
         }
-      });
-      for (let i = 0; i < this.mainData.length; i++) {
-        this.mainData[i].index = i + 1;
       }
+      // this.commiData.forEach(async (element: any) => {
+      //   if (element.id) {
+      //     await this.homeService.getCommiteeMultiImageById(element.id).toPromise().then((res: any) => {
+      //         this.multiImage = res;
+      //         this.mainData.push(
+      //           {
+      //             id: element.id,
+      //             institute_id: element.institute_id,
+      //             commTitle: element.commTitle,
+      //             commDetails: element.commDetails,
+      //             commImage: element.commImage,
+      //             createddate: element.createddate,
+      //             updateddate: element.updateddate,
+      //             multiImage: this.multiImage,
+      //             cols:false,
+                 
+      //           });
+      //           if(this.commiData.length == this.mainData.length){
+      //             this.open(0);   
+      //           }
+      //         this.multiImage.push(
+      //           {
+      //             image: element.commImage
+      //           }
+      //         )
+      //     });
+      //   }
+      // });
+      // for (let i = 0; i < this.mainData.length; i++) {
+      //   this.mainData[i].index = i + 1;
+      // }
        
     })
   }
