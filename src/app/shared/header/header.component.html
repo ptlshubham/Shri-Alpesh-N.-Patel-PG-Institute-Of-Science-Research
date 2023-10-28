@@ -150,10 +150,10 @@
                             <a routerLink="/more/news">News & Events</a>
                         </li>
                         |
-                        <li class="menu-item lm">
+                        <!-- <li class="menu-item lm">
                             <a (click)="open(content)">Birthday</a>
                         </li>
-                        |
+                        | -->
                         <li class="menu-item lm">
                             <a href="https://www.cesociety.in/#/counselling" target="_blank">Free Counselling</a>
                         </li>
@@ -168,8 +168,6 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
                 aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
                 (click)="isCollapsed = !isCollapsed">
-                <!-- <span class="navbar-toggler-icon"> </span> -->
-                <!-- <img class="navbar-toggler-icon" src="assets/images/shape/icon.png" alt=""> -->
                 <i class="fa fa-bars"></i>
             </button>
 
@@ -184,14 +182,20 @@
                         </ul>
                     </li>
                     <li class="btn-group">
-                        <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">About Us</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" routerLink="/basic/about" routerLinkActive="active">History</a>
-                            </li>
-                            <li><a class="dropdown-item" routerLink="/basic/trust" routerLinkActive="active">The
-                                    Trust</a> </li>
-                        </ul>
+                        <a class="btn btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            routerLink="/basic/about" routerLinkActive="active">About Us</a>
+                    </li>
+                    <li class="btn-group">
+                        <a class="btn btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            routerLink="/basic/committee" routerLinkActive="active">Commitees</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="btn btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            routerLink="#" routerLinkActive="active">Placement</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="btn btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            routerLink="#" routerLinkActive="active">Research</a>
                     </li>
                     <li class="btn-group">
                         <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -207,8 +211,7 @@
 
                     <li class="btn-group">
                         <a class="btn btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            routerLink="/basic/infrastructure" routerLinkActive="active">Infrastructure and Facilities</a>
-
+                            routerLink="/basic/infrastructure" routerLinkActive="active">Facilities</a>
                     </li>
                     <li class="btn-group">
                         <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -220,7 +223,7 @@
                                     routerLinkActive="active">Student Details</a> </li>
                         </ul>
                     </li>
-                    <li class="btn-group">
+                    <!-- <li class="btn-group">
                         <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">Course</a>
                         <ul class="dropdown-menu">
@@ -229,28 +232,19 @@
                             <li><a class="dropdown-item" routerLink="/course/para"
                                     routerLinkActive="active">Paramedical</a> </li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="btn-group">
                         <a class="btn btn-lg" routerLink="/basic/contact" routerLinkActive="active">Contact Us</a>
                     </li>
-                    <!-- <li class="btn-group">
-                        <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">IQAC</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" routerLink="/iqac/naac" routerLinkActive="active">NAAC</a> </li>
-                        </ul>
-                    </li> -->
                     <li class="btn-group">
                         <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">More</a>
                         <ul class="dropdown-menu">
-                            <!-- <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Department</a> </li> -->
                             <li><a class="dropdown-item" routerLink="/more/result" routerLinkActive="active">Results</a>
                             </li>
-                            <li><a class="dropdown-item" routerLink="/more/news" routerLinkActive="active">News & Events</a>
+                            <li><a class="dropdown-item" routerLink="/more/news" routerLinkActive="active">News &
+                                    Events</a>
                             </li>
-                            <li><a class="dropdown-item" routerLink="/basic/committee"
-                                    routerLinkActive="active">Committee</a> </li>
                             <li><a class="dropdown-item" routerLink="" routerLinkActive="active">Student Corner</a>
                             </li>
                             <li><a class="dropdown-item" (click)="openLinks('forms')">Form</a> </li>
@@ -264,7 +258,6 @@
             </div>
         </nav>
         <!-- MOBILEMENU -->
-
         <div class="menu-area menu-sticky">
             <!-- main-menu -->
             <div class="container" style="max-width:1750px;">
@@ -284,14 +277,17 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a routerLink="" routerLinkActive="active">About Us</a>
-                                            <ul class="sub-menu">
-                                                <li><a routerLink="/basic/about" routerLinkActive="active">History</a>
-                                                </li>
-                                                <li><a routerLink="/basic/trust" routerLinkActive="active">The Trust</a>
-                                                </li>
-                                            </ul>
+                                        <li class="menu-item">
+                                            <a routerLink="/basic/about" routerLinkActive="active">About Us</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink="/basic/committee" routerLinkActive="active">Commitees</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink="#" routerLinkActive="active">Placement</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink="#" routerLinkActive="active">Research</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a>Gallery/Media</a>
@@ -306,7 +302,7 @@
 
                                         <li class="menu-item">
                                             <a routerLink="/basic/infrastructure"
-                                                routerLinkActive="active">Infrastructure and Facilities</a>
+                                                routerLinkActive="active">Facilities</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a>Department</a>
@@ -317,7 +313,7 @@
                                                         routerLinkActive="active">Student Details</a> </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item-has-children">
+                                        <!-- <li class="menu-item-has-children">
                                             <a>Course</a>
                                             <ul class="sub-menu">
                                                 <li><a routerLink="/course/science"
@@ -327,29 +323,18 @@
                                                         routerLinkActive="active">Paramedical</a>
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <li class="">
                                             <a routerLink="/basic/contact" routerLinkActive="active">Contact Us</a>
                                         </li>
-                                        <!-- <li class="menu-item-has-children">
-                                            <a>IQAC</a>
-                                            <ul class="sub-menu">
-                                                <li><a routerLink="/iqac/naac" routerLinkActive="active">NAAC</a>
-                                                </li>
-                                            </ul>
-                                        </li> -->
                                         <li class="menu-item-has-children">
                                             <a routerLink="" routerLinkActive="active">More</a>
                                             <ul class="sub-menu">
-                                                <!-- <li><a routerLink="" routerLinkActive="active">Department</a> </li> -->
                                                 <li><a routerLink="/more/result" routerLinkActive="active">Results</a>
                                                 </li>
                                                 <li>
-                                                    <a routerLink="/more/news" routerLinkActive="active">News & Events</a>
-                                                </li>
-                                                <li>
-                                                    <a routerLink="/basic/committee"
-                                                        routerLinkActive="active">Committee</a>
+                                                    <a routerLink="/more/news" routerLinkActive="active">News &
+                                                        Events</a>
                                                 </li>
                                                 <li class="menu-item-has-children">
                                                     <a>Student Corner</a>
@@ -411,16 +396,17 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li class="menu-item-has-children">
-                                                <a routerLink="" routerLinkActive="active">About Us</a>
-                                                <ul class="sub-menu">
-                                                    <li><a routerLink="/basic/about"
-                                                            routerLinkActive="active">History</a>
-                                                    </li>
-                                                    <li><a routerLink="/basic/trust" routerLinkActive="active">The
-                                                            Trust</a>
-                                                    </li>
-                                                </ul>
+                                            <li class="menu-item">
+                                                <a routerLink="/basic/about" routerLinkActive="active">About Us</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a routerLink="/basic/committee" routerLinkActive="active">Commitees</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a routerLink="#" routerLinkActive="active">Placement</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a routerLink="#" routerLinkActive="active">Research</a>
                                             </li>
                                             <li class="menu-item-has-children">
                                                 <a>Gallery/Media</a>
@@ -435,7 +421,7 @@
 
                                             <li class="menu-item">
                                                 <a routerLink="/basic/infrastructure"
-                                                    routerLinkActive="active">Infrastructure and Facilities</a>
+                                                    routerLinkActive="active">Facilities</a>
                                             </li>
                                             <li class="menu-item-has-children">
                                                 <a>Department</a>
@@ -446,7 +432,7 @@
                                                             routerLinkActive="active">Student Details</a> </li>
                                                 </ul>
                                             </li>
-                                            <li class="menu-item-has-children">
+                                            <!-- <li class="menu-item-has-children">
                                                 <a>Course</a>
                                                 <ul class="sub-menu">
                                                     <li><a routerLink="/course/science"
@@ -454,29 +440,18 @@
                                                     <li><a routerLink="/course/para"
                                                             routerLinkActive="active">Paramedical</a> </li>
                                                 </ul>
-                                            </li>
+                                            </li> -->
                                             <li class="">
                                                 <a routerLink="/basic/contact" routerLinkActive="active">Contact Us</a>
                                             </li>
-                                            <!-- <li class="menu-item-has-children">
-                                                <a>IQAC</a>
-                                                <ul class="sub-menu">
-                                                    <li><a routerLink="/iqac/naac" routerLinkActive="active">NAAC</a>
-                                                    </li>
-                                                </ul>
-                                            </li> -->
                                             <li class="menu-item-has-children">
                                                 <a routerLink="" routerLinkActive="active">More</a>
                                                 <ul class="sub-menu">
-                                                    <!-- <li><a routerLink="" routerLinkActive="active">Department</a> </li> -->
                                                     <li><a routerLink="/more/result"
                                                             routerLinkActive="active">Results</a>
                                                     </li>
-                                                    <li><a routerLink="/more/news" routerLinkActive="active">News & Events</a>
-                                                    </li>
-                                                    <li>
-                                                        <a routerLink="/basic/committee"
-                                                            routerLinkActive="active">Committee</a>
+                                                    <li><a routerLink="/more/news" routerLinkActive="active">News &
+                                                            Events</a>
                                                     </li>
                                                     <li class="menu-item-has-children">
                                                         <a>Student Corner</a>
@@ -543,7 +518,8 @@
                         <p style="text-align: center;"><strong>{{i+1}}</strong></p>
                     </div>
                     <div class="col-2">
-                        <img src="https://api.cesociety.in{{s.profile_image}}" class="img-thumbnail" alt="wedrfgthyuj" />
+                        <img src="https://api.cesociety.in{{s.profile_image}}" class="img-thumbnail"
+                            alt="wedrfgthyuj" />
                     </div>
                     <div class="col-5">
                         <p>
@@ -581,6 +557,19 @@
                     <i class="fa fa-times" aria-hidden="true"></i> Close</button>
             </div>
         </ng-template>
+        <div class="topbar-area" style="background-color: white;" *ngIf="sliderNews.length>0">
+            <div class="container">
+                <div class="row y-middle">
+                    <marquee class="marq" direction="left" loop="">
+                        <div class="primary-color">
+                            <span class="marq-text" *ngFor="let s of sliderNews">
+                                <a href="https://api.cesociety.in{{s.link}}" target="blank"> {{s.linkName}} </a>
+                                <span *ngIf="sliderNews.length>=1">|</span></span>
+                        </div>
+                    </marquee>
+                </div>
+            </div>
+        </div>
     </header>
 
 </div>

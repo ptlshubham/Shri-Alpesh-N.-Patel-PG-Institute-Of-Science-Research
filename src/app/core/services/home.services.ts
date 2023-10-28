@@ -139,4 +139,7 @@ export class HomeService {
     getCommiteeMultiImageById(id: any) {
         return this.http.get(ApiService.getCommitteeMultiImagesByIdURL + id);
     }
+    getNaacLinkDetails() {
+        return this.http.get(ApiService.getNaacLinkDataURL);
+    }
 }
