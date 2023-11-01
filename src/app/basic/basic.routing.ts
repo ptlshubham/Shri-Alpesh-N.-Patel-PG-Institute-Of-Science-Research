@@ -5,6 +5,8 @@ import { CommitteeComponent } from './committee/committee.component';
 import { ContactComponent } from './contact/contact.component';
 import { InfrastructureComponent } from './infrastructure/infrastructure.component';
 import { TrustComponent } from './trust/trust.component';
+import { PlacementComponent } from './placement/placement.component';
+import { ResearchComponent } from './research/research.component';
 
 
 export const BasicRoutes: Routes = [{
@@ -33,6 +35,14 @@ export const BasicRoutes: Routes = [{
     {
         path: 'committee',
         component: CommitteeComponent
+    },
+    {
+        path: 'placement',
+        component: PlacementComponent
+    },
+    {
+        path: 'research',
+        component: ResearchComponent
     },
     ]
 }];

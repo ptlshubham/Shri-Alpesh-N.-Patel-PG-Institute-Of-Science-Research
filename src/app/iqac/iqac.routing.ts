@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { NaccComponent } from './nacc/nacc.component';
+import { NaacMainComponent } from './naac-main/naac-main.component';
 
 export const IqacRoutes: Routes = [{
     path: '',
     children: [
     {
         path: 'naac',
-        component: NaccComponent
+        component: NaacMainComponent
     }
     ]
 }];

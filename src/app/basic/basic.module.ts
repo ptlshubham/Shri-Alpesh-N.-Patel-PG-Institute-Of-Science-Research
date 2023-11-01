@@ -13,6 +13,8 @@ import { ActivityComponent } from './activity/activity.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { PlacementComponent } from './placement/placement.component';
+import { ResearchComponent } from './research/research.component';
 
 
 
@@ -24,6 +26,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     TrustComponent,
     InfrastructureComponent,
     ActivityComponent,
+    PlacementComponent,
+    ResearchComponent,
   ],
   imports: [
     CommonModule,

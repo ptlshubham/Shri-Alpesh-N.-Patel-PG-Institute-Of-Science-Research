@@ -118,6 +118,9 @@ export class HomeService {
     getNAACData() {
         return this.http.get(ApiService.getNaacDataURL);
     }
+    getNewNaacDetails(id:any){
+        return this.http.get(ApiService.GetNewNaacDetailsByIdURL+id);
+    }
     getKeyNoGroup(id: any) {
         let data = {
             criteria: id
@@ -141,5 +144,14 @@ export class HomeService {
     }
     getNaacLinkDetails() {
         return this.http.get(ApiService.getNaacLinkDataURL);
+    }
+    getPlacementDetails(id: any) {
+        return this.http.get(ApiService.getPlacementDetailsByIdURL + id);
+    }
+    getPlacementMultiImageById(id: any) {
+        return this.http.get(ApiService.getPlacementMultiImagesByIdURL + id);
+    }
+    getResearchDetails(id: any) {
+        return this.http.get(ApiService.getResearchDetailsByIdURL + id);
     }
 }

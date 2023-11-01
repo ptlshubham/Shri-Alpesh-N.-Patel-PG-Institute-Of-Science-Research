@@ -191,11 +191,11 @@
                     </li>
                     <li class="menu-item">
                         <a class="btn btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            routerLink="#" routerLinkActive="active">Placement</a>
+                            routerLink="/basic/placement" routerLinkActive="active">Placement</a>
                     </li>
                     <li class="menu-item">
                         <a class="btn btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            routerLink="#" routerLinkActive="active">Research</a>
+                            routerLink="/basic/research" routerLinkActive="active">Research</a>
                     </li>
                     <li class="btn-group">
                         <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -284,10 +284,10 @@
                                             <a routerLink="/basic/committee" routerLinkActive="active">Commitees</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a routerLink="#" routerLinkActive="active">Placement</a>
+                                            <a routerLink="/basic/placement" routerLinkActive="active">Placement</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a routerLink="#" routerLinkActive="active">Research</a>
+                                            <a routerLink="/basic/research" routerLinkActive="active">Research</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a>Gallery/Media</a>
@@ -403,10 +403,10 @@
                                                 <a routerLink="/basic/committee" routerLinkActive="active">Commitees</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a routerLink="#" routerLinkActive="active">Placement</a>
+                                                <a routerLink="/basic/placement" routerLinkActive="active">Placement</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a routerLink="#" routerLinkActive="active">Research</a>
+                                                <a routerLink="/basic/research" routerLinkActive="active">Research</a>
                                             </li>
                                             <li class="menu-item-has-children">
                                                 <a>Gallery/Media</a>
@@ -518,7 +518,7 @@
                         <p style="text-align: center;"><strong>{{i+1}}</strong></p>
                     </div>
                     <div class="col-2">
-                        <img src="https://api.cesociety.in{{s.profile_image}}" class="img-thumbnail"
+                        <img src="http://localhost:9000{{s.profile_image}}" class="img-thumbnail"
                             alt="wedrfgthyuj" />
                     </div>
                     <div class="col-5">
@@ -563,7 +563,7 @@
                     <marquee class="marq" direction="left" loop="">
                         <div class="primary-color">
                             <span class="marq-text" *ngFor="let s of sliderNews">
-                                <a href="https://api.cesociety.in{{s.link}}" target="blank"> {{s.linkName}} </a>
+                                <a href="http://localhost:9000{{s.link}}" target="blank"> {{s.linkName}} </a>
                                 <span *ngIf="sliderNews.length>=1">|</span></span>
                         </div>
                     </marquee>
