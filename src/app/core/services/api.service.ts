@@ -6,8 +6,8 @@ declare var $: any;
   providedIn: 'root'
 })
 export class ApiService {
-  public static HOST_URL: string = "http://localhost:9000";
-  // public static HOST_URL: string = "https://api.cesociety.in";
+  // public static HOST_URL: string = "http://localhost:9000";
+  public static HOST_URL: string = "https://api.cesociety.in";
 
   toasts: any[] = [];
   constructor(
@@ -85,6 +85,8 @@ export class ApiService {
   public static getPlacementMultiImagesByIdURL: string = ApiService.HOST_URL + '/admin/GetPlacementMultiImagesById/';
   public static getResearchDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetResearchDetailsById/';
   public static GetNewNaacDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetNewNaacDetailsById/';
+  public static getCampusMultiImagesByIdURL: string = ApiService.HOST_URL + '/admin/GetCampusMultiImagesById/';
+  public static getCampusDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetCampusDetailsById/';
 
 
 

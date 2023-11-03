@@ -7,6 +7,7 @@ import { InfrastructureComponent } from './infrastructure/infrastructure.compone
 import { TrustComponent } from './trust/trust.component';
 import { PlacementComponent } from './placement/placement.component';
 import { ResearchComponent } from './research/research.component';
+import { CampusLifeComponent } from './campus-life/campus-life.component';
 
 
 export const BasicRoutes: Routes = [{
@@ -43,6 +44,10 @@ export const BasicRoutes: Routes = [{
     {
         path: 'research',
         component: ResearchComponent
+    },
+    {
+        path: 'campus-life',
+        component: CampusLifeComponent
     },
     ]
 }];

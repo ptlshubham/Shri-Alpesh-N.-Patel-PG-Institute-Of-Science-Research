@@ -154,4 +154,11 @@ export class HomeService {
     getResearchDetails(id: any) {
         return this.http.get(ApiService.getResearchDetailsByIdURL + id);
     }
+    getCampusDetails(id: any) {
+        return this.http.get(ApiService.getCampusDetailsByIdURL + id);
+    }
+    getCampusMultiImageById(id: any) {
+        debugger
+        return this.http.get(ApiService.getCampusMultiImagesByIdURL + id);
+    }
 }

@@ -15,6 +15,7 @@ import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PlacementComponent } from './placement/placement.component';
 import { ResearchComponent } from './research/research.component';
+import { CampusLifeComponent } from './campus-life/campus-life.component';
 
 
 
@@ -28,6 +29,7 @@ import { ResearchComponent } from './research/research.component';
     ActivityComponent,
     PlacementComponent,
     ResearchComponent,
+    CampusLifeComponent,
   ],
   imports: [
     CommonModule,
