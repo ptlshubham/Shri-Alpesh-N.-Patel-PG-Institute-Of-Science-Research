@@ -132,11 +132,17 @@ h6 {
 .extra-bold {
   font-weight: 800 !important;
 }
+td a{
+  color: #1100ff;
+  transition: all 0.3s ease;
+  text-decoration: underline !important;
+  outline: none ;
+}
 a {
   color: #342424;
   transition: all 0.3s ease;
   text-decoration: none !important;
-  outline: none !important;
+  outline: none ;
 }
 a:active,
 a:hover {

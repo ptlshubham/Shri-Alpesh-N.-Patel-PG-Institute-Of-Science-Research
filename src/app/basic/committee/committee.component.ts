@@ -86,7 +86,6 @@ export class CommitteeComponent implements OnInit {
   }
   open(i: any) {
     this.mainData[i].cols = true;
-    debugger
     this.mainData.forEach((element: any, index: any) => {
       if (index == i) {
         element.cols = true;
