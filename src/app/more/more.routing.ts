@@ -9,6 +9,7 @@ import { ResultComponent } from './result/result.component';
 import { ScholarshipComponent } from './scholarship/scholarship.component';
 import { SearchComponent } from './search/search.component';
 import { SyllabusComponent } from './syllabus/syllabus.component';
+import { NewSyllabusComponent } from './new-syllabus/new-syllabus.component';
 
 export const MoreRoutes: Routes = [{
     path: '',
@@ -52,7 +53,11 @@ export const MoreRoutes: Routes = [{
         {
             path:'scholarship',
             component:ScholarshipComponent
-        }
+        },
+        {
+            path: 'syllabus',
+            component: NewSyllabusComponent
+        },
 
     ]
 }];

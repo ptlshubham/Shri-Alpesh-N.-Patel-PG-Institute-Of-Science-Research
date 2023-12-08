@@ -16,6 +16,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { NgbDropdown, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AcademicCalendarComponent } from './academic-calendar/academic-calendar.component';
 import { ScholarshipComponent } from './scholarship/scholarship.component';
+import { NewSyllabusComponent } from './new-syllabus/new-syllabus.component';
 
 
 
@@ -30,7 +31,8 @@ import { ScholarshipComponent } from './scholarship/scholarship.component';
     NewsComponent,
     MagazineComponent,
     AcademicCalendarComponent,
-    ScholarshipComponent
+    ScholarshipComponent,
+    NewSyllabusComponent
   ],
   imports: [
     CommonModule,

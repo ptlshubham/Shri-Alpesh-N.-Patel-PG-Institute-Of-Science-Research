@@ -11,25 +11,25 @@
         <!-- Intro Courses -->
         <section class="intro-section gray-bg pt-40 pb-100 md-pt-70 md-pb-70">
             <div class="container">
-                <h4 class="pb-10" style="text-align: center;">Our Research</h4>
+                <h4 class="pb-10" style="text-align: center;">Syllabus List</h4>
                 <div class="row clearfix">
                     <ul class="nav nav-tabs intro-tabb tabs-box" id="myTab" role="tablist">
-                        <div *ngFor="let r of researchData;let i=index">
+                        <div *ngFor="let r of syllabusData;let i=index">
                             <li *ngIf="r.cols" class="nav-item tab-btns" role="presentation" style="padding: 5px;">
                                 <a class="nav-link tab-btn active" id="prod-overview-tab" data-bs-toggle="tab" href="#"
                                     data-bs-target="#prod-overview" role="tab" aria-controls="prod-overview"
-                                    aria-selected="true" (click)="open(i)">{{r.researchTitle}}</a>
+                                    aria-selected="true" (click)="open(i)">{{r.syllabusTitle}}</a>
                             </li>
                             <li *ngIf="!r.cols" class="nav-item tab-btns" role="presentation" style="padding: 5px;">
                                 <a class="nav-link tab-btn " id="prod-overview-tab" data-bs-toggle="tab" href="#"
                                     data-bs-target="#prod-overview" role="tab" aria-controls="prod-overview"
-                                    aria-selected="true" (click)="open(i)">{{r.researchTitle}}</a>
+                                    aria-selected="true" (click)="open(i)">{{r.syllabusTitle}}</a>
                             </li>
                         </div>
 
                     </ul>
                 </div>
-                <div class="row clearfix" *ngFor="let r of researchData;let i=index">
+                <div class="row clearfix" *ngFor="let r of syllabusData;let i=index">
                     <!-- Content Column -->
                     <div class="col-lg-12 md-mb-30 mt-30" *ngIf="r.cols">
                         <!-- Intro Info Tabs-->
@@ -42,9 +42,7 @@
                                         <div class="course-overview">
                                             <div class="inner-box">
                                                 <div class="row">
-                                                    <div class="col-lg-12">
-                                                        <div [innerHTML]="r.researchDetails"></div>
-                                                    </div>
+                                                    <div [innerHTML]="r.syllabusDetails"></div>
                                                 </div>
                                             </div>
                                         </div>

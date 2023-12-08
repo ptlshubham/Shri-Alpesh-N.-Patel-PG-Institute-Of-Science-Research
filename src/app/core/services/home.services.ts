@@ -158,7 +158,9 @@ export class HomeService {
         return this.http.get(ApiService.getCampusDetailsByIdURL + id);
     }
     getCampusMultiImageById(id: any) {
-        debugger
         return this.http.get(ApiService.getCampusMultiImagesByIdURL + id);
+    }
+    getSyllabusDetails(id: any) {
+        return this.http.get(ApiService.getSyllabusDetailsByIdURL + id);
     }
 }

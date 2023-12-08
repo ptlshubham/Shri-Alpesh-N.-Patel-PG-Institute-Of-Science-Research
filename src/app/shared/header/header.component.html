@@ -327,7 +327,8 @@
                                                                 routerLinkActive="active">Academic Calendar</a>
                                                         </li>
                                                         <li class="current-menu-item">
-                                                            <a (click)="openLinks('syllabus')">Syllabus</a>
+                                                            <a routerLink="/more/syllabus"
+                                                                routerLinkActive="active">Syllabus</a>
                                                         </li>
                                                         <li class="menu-item-has-children current-menu-item">
                                                             <a routerLink="/more/paper" routerLinkActive="active">Old
@@ -438,7 +439,8 @@
                                                                     routerLinkActive="active">Academic Calendar</a>
                                                             </li>
                                                             <li class="current-menu-item">
-                                                                <a (click)="openLinks('syllabus')">Syllabus</a>
+                                                                <a routerLink="/more/syllabus"
+                                                                    routerLinkActive="active">Syllabus</a>
                                                             </li>
                                                             <li class="menu-item-has-children current-menu-item">
                                                                 <a routerLink="/more/paper"
@@ -495,8 +497,7 @@
                         <p style="text-align: center;"><strong>{{i+1}}</strong></p>
                     </div>
                     <div class="col-2">
-                        <img src="https://api.cesociety.in{{s.profile_image}}" class="img-thumbnail"
-                            alt="wedrfgthyuj" />
+                        <img src="https://api.cesociety.in{{s.profile_image}}" class="img-thumbnail" alt="wedrfgthyuj" />
                     </div>
                     <div class="col-5">
                         <p>

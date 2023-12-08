@@ -87,6 +87,7 @@ export class ApiService {
   public static GetNewNaacDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetNewNaacDetailsById/';
   public static getCampusMultiImagesByIdURL: string = ApiService.HOST_URL + '/admin/GetCampusMultiImagesById/';
   public static getCampusDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetCampusDetailsById/';
+  public static getSyllabusDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetSyllabusDetailsById/';
 
 
 
