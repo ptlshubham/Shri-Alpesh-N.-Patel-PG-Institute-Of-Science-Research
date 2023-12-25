@@ -42,8 +42,8 @@
                                         <div class="course-overview">
                                             <div class="inner-box">
                                                 <div class="row">
-                                                    <div class="col-lg-12" *ngIf="r.placeImage!='null' && r.placeImage!='undefined' && r.placeImage!=undefined">
-                                                        <ngb-carousel [showNavigationArrows]="true"
+                                                    <div class="col-lg-12 text-center" *ngIf="r.placeImage!='null' && r.placeImage!='undefined' && r.placeImage!=undefined">
+                                                        <ngb-carousel [showNavigationArrows]="false"
                                                             [showNavigationIndicators]="true" [interval]="2000"
                                                             [keyboard]="true" [pauseOnHover]="true" [wrap]="true"
                                                             [activeId]="'slideTwo'" class="carousel">

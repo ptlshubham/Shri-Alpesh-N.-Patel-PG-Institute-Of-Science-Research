@@ -22,6 +22,7 @@ export class CommitteeComponent implements OnInit {
   getCommeteeDataById() {
     this.homeService.getCommeteeDetails(localStorage.getItem('InstituteId')).subscribe(async (res: any) => {
       this.commiData = res;
+      debugger
       for(let i=0;i<this.commiData.length;i++){
         if (this.commiData[i].id) {
           await this.homeService.getCommiteeMultiImageById(this.commiData[i].id).toPromise().then((res: any) => {
