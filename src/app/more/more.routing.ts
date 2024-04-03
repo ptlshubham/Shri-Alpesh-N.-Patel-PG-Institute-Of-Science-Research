@@ -10,6 +10,7 @@ import { ScholarshipComponent } from './scholarship/scholarship.component';
 import { SearchComponent } from './search/search.component';
 import { SyllabusComponent } from './syllabus/syllabus.component';
 import { NewSyllabusComponent } from './new-syllabus/new-syllabus.component';
+import { AdmissionComponent } from './admission/admission.component';
 
 export const MoreRoutes: Routes = [{
     path: '',
@@ -58,6 +59,11 @@ export const MoreRoutes: Routes = [{
             path: 'syllabus',
             component: NewSyllabusComponent
         },
+        {
+            path: 'admission',
+            component: AdmissionComponent
+        },
+        
 
     ]
 }];

@@ -13,10 +13,12 @@ import { SyllabusComponent } from './syllabus/syllabus.component';
 import { NewsComponent } from './news/news.component';
 import { MagazineComponent } from './magazine/magazine.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { NgbDropdown, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdown, NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AcademicCalendarComponent } from './academic-calendar/academic-calendar.component';
 import { ScholarshipComponent } from './scholarship/scholarship.component';
 import { NewSyllabusComponent } from './new-syllabus/new-syllabus.component';
+import { AdmissionComponent } from './admission/admission.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -32,7 +34,8 @@ import { NewSyllabusComponent } from './new-syllabus/new-syllabus.component';
     MagazineComponent,
     AcademicCalendarComponent,
     ScholarshipComponent,
-    NewSyllabusComponent
+    NewSyllabusComponent,
+    AdmissionComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +43,10 @@ import { NewSyllabusComponent } from './new-syllabus/new-syllabus.component';
     HomeModule,
     SharedModule,
     NgxPaginationModule,
-    NgbModule
+    NgbModule,
+    NgbDropdownModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class MoreModule { }

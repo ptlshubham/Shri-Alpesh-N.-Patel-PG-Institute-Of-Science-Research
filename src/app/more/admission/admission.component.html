@@ -1,0 +1,116 @@
+<app-header></app-header>
+
+<body class="defult-home">
+    <div class="main-content">
+        <!-- <div class="rs-breadcrumbs breadcrumbs-overlay">
+            <div class="breadcrumbs-img">
+                <img src="assets/images/breadcrumbs/5.jpg" alt="Breadcrumbs Image">
+            </div>
+            <div class="breadcrumbs-text white-color padding">
+                <h1 class="page-title white-color">Contact Us</h1>
+                <ul>
+                    <li>
+                        <a class="active" href="index.html">Home</a>
+                    </li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div> -->
+        <!-- Breadcrumbs End -->
+
+        <!-- Contact Section Start -->
+        <div class="contact-page-section pt-100 pb-100 md-pt-70 md-pb-70">
+            <div class="container">
+                <div class="row align-items-center rs-contact-box mb-90 md-mb-50">
+                    <div class="col-lg-12 col-md-12 lg-pl-0 sm-mb-30 md-mb-30">
+                        <div class="contact-comment-box">
+                            <div class="inner-part align-items-center">
+                                <h2 class="title mb-mb-15 ">Admission Inquiry Form for Academic Year 2024-25</h2>
+                                <p class="align-items-center">We welcome your inputs and suggestions to constantly
+                                    improve upon the functioning of
+                                    the institute. </p>
+                            </div>
+                            <div id="form-messages"></div>
+                            <form id="contact-form" [formGroup]="form" (ngSubmit)="saveContactUSData()">
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
+                                            <input class="from-control" type="text" id="name" name="name"
+                                                placeholder="Name" formControlName="name"
+                                                [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
+                                                [(ngModel)]="contactModel.name">
+                                            <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['name'].errors['required']">
+                                                    Name
+                                                    is
+                                                    required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
+                                            <input class="from-control" type="text" id="email" name="email"
+                                                placeholder="Email" formControlName="email"
+                                                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+                                                [(ngModel)]="contactModel.email">
+                                            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                                                <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
+                                            <input class="from-control" type="number" id="conatct" name="conatct"
+                                                placeholder="conatct" formControlName="contact"
+                                                [ngClass]="{ 'is-invalid': submitted && f['contact'].errors }"
+                                                [(ngModel)]="contactModel.contact">
+                                            <div *ngIf="submitted && f['contact'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['contact'].errors['required']">
+                                                    Contact Number
+                                                    is
+                                                    required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
+                                            <input class="from-control" type="text" id="subject" name="subject"
+                                                placeholder="Subject" formControlName="subject"
+                                                [ngClass]="{ 'is-invalid': submitted && f['subject'].errors }"
+                                                [(ngModel)]="contactModel.subject">
+
+                                            <div *ngIf="submitted && f['subject'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['subject'].errors['required']">
+                                                    Subject
+                                                    is
+                                                    required
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 mb-50">
+                                            <textarea class="from-control" id="message" name="message"
+                                                placeholder=" Message" formControlName="message"
+                                                [ngClass]="{ 'is-invalid': submitted && f['message'].errors }"
+                                                [(ngModel)]="contactModel.message"></textarea>
+                                            <div *ngIf="submitted && f['message'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['message'].errors['required']">
+                                                    Message
+                                                    is
+                                                    required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-0">
+                                        <input class="btn-send" type="submit">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Section End -->
+    </div>
+    <!-- Main content End -->
+</body>
+<app-footer></app-footer>
