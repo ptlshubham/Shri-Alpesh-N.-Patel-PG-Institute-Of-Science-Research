@@ -9,15 +9,36 @@ import { HomeService } from 'src/app/core/services/home.services';
   styleUrls: ['./admission.component.css']
 })
 export class AdmissionComponent implements OnInit {
-  contactModel: any = {};
+  addmissionModel: any = {};
+  validationForm: any;
+  isUpdate: boolean = false;
+  selectedSubject: any = '';
+  subjectdata: any = [
+    { subname: 'Chemistry' },
+    { subname: 'Microbiology' },
+    { subname: 'Biotechnology' },
+    { subname: 'Biochemistry' },
+    { subname: 'information Technology' },
+    { subname: 'physics' },
+    { subname: 'Mathematics' },
+    { subname: 'MT(CLT)-Medical Technology' },
+    { subname: 'DMLT-Diploma in Medical Laboratory Technology' },
+    { subname: 'P.G.Diploma in Food Science & Quality Control' },
+  ]
   form: FormGroup = new FormGroup({
-    name: new FormControl(''),
-    subject: new FormControl(''),
-    contact: new FormControl(''),
+    sname: new FormControl(''),
+    city: new FormControl(''),
     email: new FormControl(''),
-    message: new FormControl(''),
+    mnumber: new FormControl(''),
+    uname: new FormControl(''),
+    cname: new FormControl(''),
+    bsub: new FormControl(''),
+    cgpa: new FormControl(''),
+    
   });
   submitted = false;
+
+
   constructor(
     private homeService: HomeService,
     private toastrMessage: ToastrService,
@@ -26,15 +47,24 @@ export class AdmissionComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.selectedSubject = 'Select Subject';
     this.form = this.formBuilder.group(
       {
-        name: ['', Validators.required],
-        contact: ['', [Validators.required]],
-        subject: ['', Validators.required],
-        message: ['', Validators.required],
+        sname: ['', Validators.required],
+        city: ['', [Validators.required]],
         email: ['', [Validators.required, Validators.email]],
+        mnumber: ['', Validators.required],
+        uname: ['', Validators.required],
+        cname: ['', Validators.required],
+        bsub: ['', Validators.required],
+        cgpa: ['', Validators.required],
+        
       },
     );
+  }
+  selectSubject(val: any) {
+    this.selectedSubject = val;
+
   }
   get f(): { [key: string]: AbstractControl } {
     return this.form.controls;
@@ -44,11 +74,11 @@ export class AdmissionComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
-    this.contactModel.institute_id = localStorage.getItem('InstituteId');
-    this.homeService.saveContactUsDetails(this.contactModel).subscribe((res: any) => {
+    this.addmissionModel.institute_id = localStorage.getItem('InstituteId');
+    this.homeService.saveContactUsDetails(this.addmissionModel).subscribe((res: any) => {
       if (res == 'success') {
         this.submitted = false;
-        this.contactModel = {};
+        this.addmissionModel = {};
         this.toastrMessage.success('Thank you for valuable feedback.', 'Success', { timeOut: 3000, });
       }
     })
