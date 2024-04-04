@@ -34,74 +34,26 @@
                 </p>
               </div>
               <div id="form-messages"></div>
-              <form
-                id="contact-form"
-                [formGroup]="form"
-                (ngSubmit)="saveContactUSData()"
-              >
+              <form id="contact-form" [formGroup]="form">
                 <fieldset>
                   <div class="row">
+
                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
-                      <div ngbDropdown class="d-inline-block">
-                        <button
-                          type="button"
-                          class="btn btn-outline-primary"
-                          id="dropdownBasic1"
-                          ngbDropdownToggle
-                        >
-                          {{ selectedSubject }}
-                        </button>
-                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                          <div *ngFor="let c of subjectdata">
-                            <button
-                              ngbDropdownItem
-                              on-click="selectSubject(c.subname)"
-                            >
-                              {{ c.subname }}
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
-                      <input
-                        class="from-control"
-                        type="text"
-                        id="sname"
-                        name="sname"
-                        placeholder="Student Name"
-                        formControlName="sname"
-                        [ngClass]="{
-                          'is-invalid': submitted && f['sname'].errors
-                        }"
-                        [(ngModel)]="addmissionModel.sname"
-                      />
-                      <div
-                        *ngIf="submitted && f['sname'].errors"
-                        class="invalid-feedback"
-                      >
+                      <input class="from-control" type="text" id="sname" name="sname" placeholder="Student Name"
+                        formControlName="sname" [ngClass]="{'is-invalid': submitted && f['sname'].errors}"
+                        [(ngModel)]="addmissionModel.studentname" />
+                      <div *ngIf="submitted && f['sname'].errors" class="invalid-feedback">
                         <div *ngIf="f['sname'].errors['required']">
                           Student Name is required
                         </div>
                       </div>
                     </div>
                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
-                      <input
-                        class="from-control"
-                        type="text"
-                        id="city"
-                        name="city"
-                        placeholder="City"
-                        formControlName="city"
-                        [ngClass]="{
+                      <input class="from-control" type="text" id="city" name="city" placeholder="City"
+                        formControlName="city" [ngClass]="{
                           'is-invalid': submitted && f['city'].errors
-                        }"
-                        [(ngModel)]="addmissionModel.city"
-                      />
-                      <div
-                        *ngIf="submitted && f['city'].errors"
-                        class="invalid-feedback"
-                      >
+                        }" [(ngModel)]="addmissionModel.city" />
+                      <div *ngIf="submitted && f['city'].errors" class="invalid-feedback">
                         <div *ngIf="f['city'].errors['required']">
                           City is required
                         </div>
@@ -111,45 +63,23 @@
                       </div>
                     </div>
                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
-                      <input
-                        class="from-control"
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="email"
-                        formControlName="email"
-                        [ngClass]="{
+                      <input class="from-control" type="email" id="email" name="email" placeholder="email"
+                        formControlName="email" [ngClass]="{
                           'is-invalid': submitted && f['email'].errors
-                        }"
-                        [(ngModel)]="addmissionModel.contact"
-                      />
-                      <div
-                        *ngIf="submitted && f['email'].errors"
-                        class="invalid-feedback"
-                      >
+                        }" [(ngModel)]="addmissionModel.email" />
+                      <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
                         <div *ngIf="f['email'].errors['required']">
                           Email Address is required
                         </div>
                       </div>
                     </div>
                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
-                      <input
-                        class="from-control"
-                        type="number"
-                        id="mnumber"
-                        name="mnumber"
-                        placeholder="Mobile Number(Without Country Code)"
-                        formControlName="mnumber"
-                        [ngClass]="{
+                      <input class="from-control" type="number" id="mnumber" name="mnumber"
+                        placeholder="Mobile Number(Without Country Code)" formControlName="mnumber" [ngClass]="{
                           'is-invalid': submitted && f['mnumber'].errors
-                        }"
-                        [(ngModel)]="addmissionModel.mnumber"
-                      />
+                        }" [(ngModel)]="addmissionModel.contact" />
 
-                      <div
-                        *ngIf="submitted && f['mnumber'].errors"
-                        class="invalid-feedback"
-                      >
+                      <div *ngIf="submitted && f['mnumber'].errors" class="invalid-feedback">
                         <div *ngIf="f['mnumber'].errors['required']">
                           Mobile Number is required
                         </div>
@@ -157,23 +87,12 @@
                     </div>
 
                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
-                      <input
-                        class="from-control"
-                        type="text"
-                        id="uname"
-                        name="uname"
-                        placeholder="Name of the University (Last Bachelor Degree)"
-                        formControlName="uname"
-                        [ngClass]="{
+                      <input class="from-control" type="text" id="uname" name="uname"
+                        placeholder="Name of the University (Last Bachelor Degree)" formControlName="uname" [ngClass]="{
                           'is-invalid': submitted && f['uname'].errors
-                        }"
-                        [(ngModel)]="addmissionModel.uname"
-                      />
+                        }" [(ngModel)]="addmissionModel.lastdegree" />
 
-                      <div
-                        *ngIf="submitted && f['uname'].errors"
-                        class="invalid-feedback"
-                      >
+                      <div *ngIf="submitted && f['uname'].errors" class="invalid-feedback">
                         <div *ngIf="f['uname'].errors['required']">
                           Name of the University is required
                         </div>
@@ -181,23 +100,12 @@
                     </div>
 
                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
-                      <input
-                        class="from-control"
-                        type="text"
-                        id="cname"
-                        name="cname"
-                        placeholder="College Name (Bachelor Degree)"
-                        formControlName="cname"
-                        [ngClass]="{
+                      <input class="from-control" type="text" id="cname" name="cname"
+                        placeholder="College Name (Bachelor Degree)" formControlName="cname" [ngClass]="{
                           'is-invalid': submitted && f['cname'].errors
-                        }"
-                        [(ngModel)]="addmissionModel.cname"
-                      />
+                        }" [(ngModel)]="addmissionModel.clgname" />
 
-                      <div
-                        *ngIf="submitted && f['cname'].errors"
-                        class="invalid-feedback"
-                      >
+                      <div *ngIf="submitted && f['cname'].errors" class="invalid-feedback">
                         <div *ngIf="f['cname'].errors['required']">
                           College Name is required
                         </div>
@@ -205,49 +113,39 @@
                     </div>
 
                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
-                      <input
-                        class="from-control"
-                        type="text"
-                        id="bsub"
-                        name="bsub"
-                        placeholder="Bachelor Subject
-                                                "
-                        formControlName="bsub"
-                        [ngClass]="{
-                          'is-invalid': submitted && f['bsub'].errors
-                        }"
-                        [(ngModel)]="addmissionModel.bsub"
-                      />
+                      <div class="form-group mb-3">
 
-                      <div
-                        *ngIf="submitted && f['bsub'].errors"
-                        class="invalid-feedback"
-                      >
-                        <div *ngIf="f['bsub'].errors['required']">
-                          Bachelor Subject is required
+                        <input class="from-control" type="text" id="bsub" name="bsub" placeholder="Bachelor Subject
+                                                " formControlName="bsub" [ngClass]="{
+                          'is-invalid': submitted && f['bsub'].errors
+                        }" [(ngModel)]="addmissionModel.bachelorsubject" />
+                        <div *ngIf="submitted && f['bsub'].errors" class="invalid-feedback">
+                          <div *ngIf="f['bsub'].errors['required']">
+                            Bachelor Subject is required
+                          </div>
                         </div>
                       </div>
+
                     </div>
 
                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
-                      <input
-                        class="from-control"
-                        type="text"
-                        id="cgpa"
-                        name="cgpa"
-                        placeholder="CGPA (Ignore if result is not declared)
-                                                "
-                        formControlName="cgpa"
-                        [ngClass]="{
-                          'is-invalid': submitted && f['cgpa'].errors
-                        }"
-                        [(ngModel)]="addmissionModel.cgpa"
-                      />
+                      <input class="from-control" type="text" id="cgpa" name="cgpa"
+                        placeholder="CGPA (Ignore if result is not declared)" formControlName="cgpa"
+                        [ngClass]="{'is-invalid': submitted && f['cgpa'].errors}" [(ngModel)]="addmissionModel.cgpa" />
                     </div>
-                  </div>
-
-                  <div class="form-group mb-0 w-50">
-                    <input class="btn-send" type="submit" />
+                    <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
+                      <div class="form-group mb-3">
+                        <label class="form-label">Select Subject</label>
+                        <select required class="form-control form-select" id="selectedSubject" name="selectedSubject"
+                          (change)="onSubjectChange($event)">
+                          <option value="">Select</option>
+                          <option *ngFor="let c of subjectdata">{{ c.subname }}</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group mb-0 ">
+                      <button class="btn-send" type="submit" (click)="saveContactUSData()">Submit</button>
+                    </div>
                   </div>
                 </fieldset>
               </form>

@@ -97,6 +97,8 @@ export class ApiService {
   //Cashfree APIS
   public static createCashfreeOrderURL: string = ApiService.HOST_URL + '/cashfree/createCashfreeOrder';
 
+  public static saveAdmissionDetailsURL: string = ApiService.HOST_URL + '/admin/SaveAdmissionDetails';
+  public static getAdmissionListDataURL: string = ApiService.HOST_URL + '/admin/GetAdmissionListData/';
 
 
 

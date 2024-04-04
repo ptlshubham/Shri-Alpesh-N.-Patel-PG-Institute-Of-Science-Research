@@ -163,4 +163,7 @@ export class HomeService {
     getSyllabusDetails(id: any) {
         return this.http.get(ApiService.getSyllabusDetailsByIdURL + id);
     }
+    SaveAdmissionDetails(data: any) {
+        return this.http.post(ApiService.saveAdmissionDetailsURL, data);
+    }
 }
