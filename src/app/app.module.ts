@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
-import { NgbDropdown, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BasicModule } from './basic/basic.module';
@@ -31,7 +31,6 @@ import { ToastrModule } from 'ngx-toastr';
     DepartmentModule,
     CourseModule,
     MoreModule,
-    NgbModule,
     HttpClientModule,
     NgxPaginationModule,
     ToastrModule.forRoot(),

@@ -15,6 +15,7 @@ import { SectionCoursesComponent } from './section-courses/section-courses.compo
 import { SectionMessageComponent } from './section-message/section-message.component';
 import { StatisticsIncrementorComponent } from './statistics-incrementor/statistics-incrementor.component';
 import { QuickConnectComponent } from './quick-connect/quick-connect.component';
+import { NotificationComponent } from './notification/notification.component';
 
 
 
@@ -29,7 +30,8 @@ import { QuickConnectComponent } from './quick-connect/quick-connect.component';
     SectionCoursesComponent,
     SectionMessageComponent,
     StatisticsIncrementorComponent,
-    QuickConnectComponent
+    QuickConnectComponent,
+    NotificationComponent
   ],
   imports: [
     CommonModule,

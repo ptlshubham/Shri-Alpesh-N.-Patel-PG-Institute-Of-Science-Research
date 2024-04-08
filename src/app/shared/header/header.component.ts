@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
     // config.keyboard = false;
     this.getStaffDetails();
     this.getLastUpdateSite();
-    this.getNewsMaruqeeDetails();
+    // this.getNewsMaruqeeDetails();
   }
   moreOpen() {
     this.readMore = true;
