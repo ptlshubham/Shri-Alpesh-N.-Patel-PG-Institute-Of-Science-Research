@@ -87,6 +87,17 @@ export class CommitteeComponent implements OnInit {
   }
   open(i: any) {
     this.mainData[i].cols = true;
+    console.log('Opening tab:', i);
+
+    // Scroll to the element with the template reference variable
+    const element = document.querySelector(`#prod-overview-${i}`);
+    console.log('Scrolling to element:', element);
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      console.log('Element not found for scrolling.');
+    }
     this.mainData.forEach((element: any, index: any) => {
       if (index == i) {
         element.cols = true;

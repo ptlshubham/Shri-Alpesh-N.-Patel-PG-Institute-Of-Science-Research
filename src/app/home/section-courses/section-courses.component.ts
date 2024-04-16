@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HomeService } from 'src/app/core/services/home.services';
 
 @Component({
   selector: 'app-section-courses',
@@ -6,10 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section-courses.component.css']
 })
 export class SectionCoursesComponent implements OnInit {
+  departmentData: any = [];
 
-  constructor() { }
+  constructor(
+    private homeService: HomeService,
+    private router:Router
+  ) { }
 
   ngOnInit(): void {
+    this.getDepartmentDetails();
   }
-
+  handleClick(id: any) {
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['/department/overview', id]);
+    });
+  }
+  getDepartmentDetails() {
+    this.homeService.getDepartmentDataById(localStorage.getItem('InstituteId')).subscribe((res: any) => {
+      this.departmentData = res;
+    })
+  }
 }

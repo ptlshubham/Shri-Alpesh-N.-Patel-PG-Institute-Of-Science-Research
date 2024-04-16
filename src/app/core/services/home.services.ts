@@ -166,4 +166,7 @@ export class HomeService {
     SaveAdmissionDetails(data: any) {
         return this.http.post(ApiService.saveAdmissionDetailsURL, data);
     }
+    getDepMultiImageById(id: any) {
+        return this.http.get(ApiService.getDepMultiImageByIdURL + id);
+    }
 }

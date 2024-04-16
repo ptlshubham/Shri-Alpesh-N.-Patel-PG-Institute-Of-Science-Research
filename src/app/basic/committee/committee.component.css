@@ -163,3 +163,7 @@
   font-weight: 500;
   margin-top: 12px;
 }
+.scrollable-content {
+  overflow-y: auto;
+  overflow-x: auto;
+}

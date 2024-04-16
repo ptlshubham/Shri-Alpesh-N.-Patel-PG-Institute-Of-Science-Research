@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
   navLogo: any;
   marqueeData: any = [];
   sliderNews: any = [];
+  depDetails: any = [];
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
@@ -43,6 +44,7 @@ export class HeaderComponent implements OnInit {
     // config.keyboard = false;
     this.getStaffDetails();
     this.getLastUpdateSite();
+    this.getdepDataById();
     // this.getNewsMaruqeeDetails();
   }
   moreOpen() {
@@ -63,6 +65,11 @@ export class HeaderComponent implements OnInit {
       this.staffDataTable = res;
     })
   }
+  getdepDataById() {
+    this.homeService.getDepartmentDataById(localStorage.getItem('InstituteId')).subscribe((res: any) => {
+      this.depDetails = res;
+    })
+  }
   getLastUpdateSite() {
     this.homeService.getLastUpdateSiteByIdURL(localStorage.getItem('InstituteId')).subscribe((res: any) => {
       this.siteUpdate = res[0];
@@ -78,5 +85,10 @@ export class HeaderComponent implements OnInit {
         }
       });
     })
+  }
+  handleClick(id: any) {
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['/department/overview', id]);
+    });
   }
 }

@@ -43,8 +43,13 @@
     font-weight: 500;
     margin-top: 12px;
   }
-  .scrollable-content {
-    max-height: 1080px; /* Adjust the height as needed */
-    overflow-y: auto;
-    overflow-x: auto;
+  .tab-btns{
+    padding: 5px !important;
+  }
+  .rs-team.style1 .team-item .content-part{
+    top:45% !important;
+}
+
+.textCustom{
+    color: white !important;
 }

@@ -93,6 +93,7 @@ export class ApiService {
 
   public static adminLoginURL: string = ApiService.HOST_URL + '/authenticate/adminLogin';
 
+  public static getDepMultiImageByIdURL: string = ApiService.HOST_URL + '/admin/GetDepMultiImageById/';
 
   //Cashfree APIS
   public static createCashfreeOrderURL: string = ApiService.HOST_URL + '/cashfree/createCashfreeOrder';

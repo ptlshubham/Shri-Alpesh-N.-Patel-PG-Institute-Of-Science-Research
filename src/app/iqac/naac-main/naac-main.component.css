@@ -2,14 +2,23 @@
     padding-left: 30px !important;
     font-weight: 500;
 }
-.custom-p{
+
+.custom-p {
     color: 342424;
     text-decoration: underline !important;
 }
-.custom-pd{
+
+.custom-pd {
     padding: 5px !important;
 }
+
 .course-overview .inner-box {
     position: relative;
     padding: 0px 15px 15px !important;
+}
+
+.scrollable-content {
+    max-height: 1080px;
+    overflow-y: auto;
+    overflow-x: auto;
 }
