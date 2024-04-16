@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HomeService } from 'src/app/core/services/home.services';
 
 @Component({
@@ -10,7 +10,7 @@ export class CommitteeComponent implements OnInit {
   commiData: any = [];
   multiImage: any = [];
   mainData: any = [];
-
+  @ViewChild('descriptionRef') descriptionRef!: ElementRef;
   constructor(
     private homeService: HomeService
   ) { }
@@ -87,17 +87,14 @@ export class CommitteeComponent implements OnInit {
   }
   open(i: any) {
     this.mainData[i].cols = true;
-    console.log('Opening tab:', i);
 
-    // Scroll to the element with the template reference variable
-    const element = document.querySelector(`#prod-overview-${i}`);
-    console.log('Scrolling to element:', element);
+    if (this.descriptionRef && this.descriptionRef.nativeElement) {
+      this.descriptionRef.nativeElement.focus();
 
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      console.log('Element not found for scrolling.');
+      // Scroll to the description element
+      this.descriptionRef.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    
     this.mainData.forEach((element: any, index: any) => {
       if (index == i) {
         element.cols = true;
@@ -107,3 +104,4 @@ export class CommitteeComponent implements OnInit {
     });
   }
 }
+
